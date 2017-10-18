@@ -1,0 +1,49 @@
+<% include partials/header %>
+
+	<div class="intro">
+		<div class="container">
+			<h1>This event is all about the community. Learning together, collaborating with each other and building something that can change someone’s future.</h1>
+
+			<h3>Atlassian, Philippines, BGC</h3>
+			<h3>November 24 - 26, 2017</h3>
+		</div>
+	</div>
+
+	<div class="about" id="about">
+		<div class="container">
+			<h1>About Our Event</h1>
+			<p>Hackathons are great events to learn and explore new technologies. But for many years, there has been a lack of number of women attending hackathons and we want to change that. This year, we want our community to open their eyes into the world of hackathons. Every attendee who has build something and presented their work in front of the community gets the Women Who Code Manila Hackathon Finisher Medal.</p>
+
+			<h1>Who We Are</h1>
+			<p>Women Who Code is a global non-profit organization dedicated to inspiring women to succeed in technology careers.</p>
+			<p>Our Manila chapter just started this January 20, 2017 and our community has grown to more than 1000+ members in less than 7 months. We also have organized more than 80+ events already and created more than 25+ leaders serving the community as volunteers.</p>
+
+			<h1>Audience</h1>
+			<p>Over 200 attendees are coming from all areas of the tech community. Most of them are first time hackathon participants. We are expecting 60% professional, 25% students, 15% coming from different backgrounds who decided to learn coding. They can be developers, designers, engineers and more. </p>
+			<p>We will also have a kiddie hackathon on November 25th and 26th for the kids of the attendees (max of 35 kids per day). We noticed that women in the Philippines have bigger responsibilities at home as mothers and they need someone to take care of their kids before being able to go to an event. So we decided to help them with that too.</p>
+		</div>
+	</div>
+
+	<div class="organizers" id="organizers">
+		<div class="container">
+			<h1>Organizing Team</h1>
+				<div class="row">
+
+	          		<% organizers.forEach((organizer) => { %>
+		          		<div class="col-md-2 col-sm-3 col-xs-6">
+						    <div class="team-member">
+		            			<img src="<%= organizer.imageURL %>" alt="<%= organizer.name %>" class="team-avatar">
+						        <div class="team-member-text">
+						            <h3><%= organizer.name %></h3>
+						        </div>
+		          			</div>
+		          		</div>
+					<% }) %>
+	  			
+	  			</div> <!--row closing-->
+		</div>
+	</div> <!--organizers closing-->
+</div>
+
+<% include partials/bottom %>
+

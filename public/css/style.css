@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600,700');
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, p {
+	color: #48484A;
+}
+
+a {
+	color: #007a7c;
+}
+
+.row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.top-pic {
+	margin-top: 40px;
+}
+
+#pic {
+	background-image: url("https://bytebucket.org/wwcodemanila/hackathon-assets/raw/faf47915b1f18fea8dbe31f47110ad22b7b043ed/backgroundImage2.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 400px;
+}
+
+#logo-top-pic img {
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-top: 50px; 
+	margin-bottom: 30px;
+}
+
+#logo-top-pic h3 {
+	margin-top: 0; 
+	margin-bottom: 0;
+}
+
+#logo-top-pic a {
+	margin-left: 10px;
+}
+
+/* Nav Bar Related */
+.container-fluid {
+	padding-left: 50px;
+	padding-right: 50px;
+	height: 55px;
+}
+
+.navbar {
+	-webkit-box-shadow: 0 4px 6px -6px #999;
+    -moz-box-shadow: 0 4px 6px -6px #999;
+    box-shadow: 0 4px 6px -6px #999;
+}
+
+.navbar-default {
+	background-color: #fff;
+	border-color: #fff;
+}
+
+.navbar-header {
+  	height: 60px;
+}
+
+.navbar-right {
+	padding-right: 30px;
+}
+
+.nav li {
+	font-weight: 400;
+	font-size: 16px;
+	color: #48484A;
+	padding-top: 8px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: transparent;
+    color: #007a7c;
+}
+
+.navbar-brand {
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 50px;
+	margin-left: 30px;
+}
+
+/* Collapsible NavBar */
+#topNavBar {
+    background-color: white; 
+}
+
+#topNavBar ul {
+	padding-left: 20px;
+	
+}
+
+.navbar-toggle {
+	margin-top: 14px;
+	margin-right: 30px;
+}
+
+.container-fluid {
+	padding-right: 0px;
+	padding-left: 0px;
+	height: 60px;
+}
+
+.btn-default {
+	background-color: #007a7c;
+	padding: 12px 35px;
+	font-size: 18px;
+	margin: 30px auto;
+	border-color: #007a7c;
+	border-width: 1px;
+	font-weight: thin;
+	color: white;
+}
+
+.gradient {
+	display:inline-block;
+}
+
+/* Intro */
+.intro {
+	margin-bottom: 40px;
+}
+
+.intro h1 {
+	font-weight: 700;
+	font-size: 28px;
+	margin-bottom: 20px;
+	margin-top: 0px;
+	color: #007a7c;
+}
+
+.intro h3 {
+	font-weight: 700;
+	font-size: 23px;
+	margin-top: 40px;
+	margin-right: 100px;
+	display: inline;
+	color: #48484A;
+}
+
+/* About */
+.about {
+	background-color: white;
+}
+
+.about h1 {
+	font-weight: 700;
+	font-size: 28px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+.about p {
+	line-height: 25px;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+/* Details */
+.details {
+	height: 400px;
+}
+
+/* Organizers */
+.organizers{
+	padding:20px 0;
+	margin:20px 0;
+
+}
+.organizers h1{
+	font-weight: 700;
+	font-size: 28px;
+	margin-bottom: 40px;
+}
+.organizers .container{
+	border-top: 1px solid rgba(0, 122, 124, 0.25);
+	padding-top: 20px;
+}
+.organizers .team-member {
+	margin-bottom:20px;
+	text-align: center;
+}
+.organizers .team-avatar{
+	border:2px solid #007a7c;
+	/*box-shadow: 7px 7px 118px 14px rgba(45,45,45,.17);*/
+	margin: 10px 0;
+	border-radius:100px;
+	width: 130px;
+}
+.organizers .team-member-text h3{
+	font-size:16px;
+	margin-top: 10px;
+}
+
+/* Mentors */
+.mentors{
+	padding:20px 0;
+	margin:20px 0;
+}
+.mentors .container{
+	border-top: 1px solid rgba(0, 122, 124, 0.25);
+	padding-top: 20px;
+}
+.mentors h1{
+	font-weight: 700;
+	font-size: 28px;
+	margin-bottom: 40px;
+}
+.mentors .team-member {
+	margin-bottom:20px;
+	text-align: center;
+}
+.mentors .team-avatar{
+	border:3px solid #007a7c;
+	/*box-shadow: 7px 7px 118px 14px rgba(45,45,45,.17);*/
+	margin: 10px 0;
+	border-radius:100px;
+	width: 130px;
+}
+.mentors .team-member-text h3{
+	font-size:16px;
+	margin-top: 10px;
+}
+
+/* COC */
+.coc .container p{
+	line-height: 25px;
+	font-weight: 300;
+}
+
+/* FAQ */
+.faq .container .section-title{
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid rgba(0, 122, 124, 0.25);
+}
+.faq .container .section-title h1{
+	font-weight: 700;
+
+}
+.faq .container .section-title h2{
+	font-weight: 200;
+	font-size: 18px;
+	margin:0;
+
+}
+
+.faq .container .faq-block{
+	background: #F5F5F5;
+	padding: 20px;
+	margin:20px 0;
+	border-radius:4px;
+}
+.faq .container .faq-block h4{
+	font-weight: 700;
+	font-size:16px;
+}
+.faq .container .faq-block p{
+	font-weight: 300;
+	font-size:14px;
+	padding-left: 10px;
+	margin-top: 15px;
+	line-height: 25px;
+}
+.faq-block ul li{
+	margin:5px 0;
+	font-weight: 300;
+}
+.faq-block #hackathon-reasons li{
+	font-weight: 400;
+}
+
+/* Participants */
+.participants h1 {
+	font-weight: 700;
+	font-size: 28px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+.participants hr {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+/* Supporters */
+
+.supporters {
+	margin-top: 60px;
+}
+
+.supporters h1{
+	font-weight: 700;
+	font-size: 28px;
+	margin-top: 40px;
+}
+
+.supporters h3{
+	font-weight: 700;
+	font-size: 22px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	color: #007a7c;
+}
+
+#support-email {
+	font-weight: 700;
+	font-size: 28px;
+	margin-top: 0;
+}
+
+#kiddie {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+hr {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+/* Travelling */
+.travel h1{
+	font-weight: 700;
+	font-size: 28px;
+	margin-top: 40px;
+}
+
+.travel h3{
+	font-weight: 700;
+	font-size: 22px;
+	margin-top: 40px;
+}
+
+#subtitle {
+	margin-bottom: 40px;
+}
+
+
+/* Code of Conduct */
+.coc h1 {
+	font-weight: 700;
+	font-size: 28px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.coc h3 {
+	font-weight: 700;
+	font-size: 22px;
+	margin-top: 40px;
+}
+
+/* Terms and Conditions */
+.toc h1 {
+	font-weight: 700;
+	font-size: 28px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.toc h3 {
+	font-weight: 700;
+	font-size: 22px;
+	margin-top: 40px;
+}
+
+/* Join */
+.ticket-intro {
+	margin-right: 60px;
+	margin-left: 60px;
+	margin-bottom: 30px;
+	margin-top: 100px
+}
+
+.ticket-intro h1 {
+	font-weight: 700;
+	font-size: 28px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+.eventbrite {
+	width: 100%; 
+	text-align: center;
+}
+
+.eventbrite iframe {
+	height: 900px; 
+	width: 90%;
+}
+
+/* Footer */
+.footer {
+	margin-top: 20px
+}
+.footer p{
+	margin-top: 10px;
+}
+
+/* Responsive */
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+	.container-fluid {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}
+
+@media (max-width: 1150px) {
+	.eventbrite iframe {
+		height: 950px; 
+		width: 90%;
+	}
+}
+
+/* Portrait tablets and small desktops */
+
+@media (max-width: 980px) {
+	.nav li {
+		font-size: 16px;
+	}
+
+	#topNavBar a {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.intro h3 {
+  	font-size: 20px;
+  	}
+
+  	.eventbrite iframe {
+		height: 1000px; 
+		width: 85%;
+	}
+
+}
+
+@media (max-width: 910px) {
+	.nav li {
+		font-size: 15px;
+	}
+
+	#topNavBar a {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media (max-width: 910px) {
+	.nav li {
+		font-size: 15px;
+	}
+
+	#topNavBar a {
+		padding-left: 8.5px;
+		padding-right: 8.5px;
+	}
+}
+
+@media (max-width: 850px) {
+	.nav li {
+		font-size: 14px;
+	}
+
+	#topNavBar a {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}
+
+@media (max-width: 810px) {
+	.nav li {
+		font-size: 13.5px;
+	}
+
+	#topNavBar a {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	.eventbrite iframe {
+		height: 1050px; 
+		width: 85%;
+	}
+}
+
+@media (max-width: 790px) {
+	.nav li {
+		font-size: 13.5px;
+	}
+
+	#topNavBar a {
+		padding-left: 6.5px;
+		padding-right: 6.5px;
+	}
+}
+
+@media (max-width: 750px) {
+  #pic {
+  	visibility: hidden;
+  	position: fixed;
+  }
+  .intro h3 {
+  	font-size: 20px;
+  	display: block;
+  	margin-bottom: 5px;
+  }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .container-fluid {
+	height: 60px;
+  }
+
+  .navbar-brand {
+	padding-top: 8px;
+	padding-bottom: 9px;
+	padding-left: 15px;
+	margin-left: 15px;
+  }
+
+  .navbar-header {
+  	height: 60px;
+  }
+
+  .intro {
+  	margin-left: 15px;
+  	margin-right: 15px;
+  	margin-bottom: 20px;
+  }
+
+  .intro h1 {
+  	font-size: 23px;
+  	margin-bottom: 20px;
+  }
+
+  .intro h3 {
+  	font-size: 18px;
+  	margin-top: 0px;
+  	margin-bottom: 0px;
+  }
+
+  .about {
+  	margin-left: 15px;
+  	margin-right: 15px;
+  }
+
+  .about h1 {
+  	font-size: 23px;
+  	margin-top: 30px;
+  }
+
+  .about p {
+  	font-size: 14px;
+  	line-height: 20px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+	.ticket-intro {
+		margin-right: 40px;
+		margin-left: 40px;
+	}
+
+	.eventbrite iframe {
+		height: 1300px; 
+		width: 80%;
+	}
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+	.eventbrite iframe {
+		height: 1400px; 
+		width: 80%;
+	}
+
+	.intro {
+		margin-bottom: 15px;
+	}
+
+  	.intro h1 {
+  		font-size: 25px;
+  		margin-bottom: 20px;
+  	}
+
+  	.intro h3 {
+  		font-size: 16px;
+  	}
+
+}
+
+@media (max-width: 320px) {
+
+}
