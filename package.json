@@ -27,6 +27,6 @@
     "express-ejs-layouts": "^2.3.1"
   },
   "engines": {
-    "node": "4.2.0"
+    "node": "6.11.4"
   }
 }
