@@ -3,7 +3,7 @@ const ejsLayouts = require('express-ejs-layouts')
 
 const app = express()
 
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'))
@@ -44,6 +44,11 @@ app.get('/', function(req, res) {
 			id: 7,
 			name: "Mars Gabutero",
 			imageURL: "img/organizers/mars.jpg"
+		},
+		{	
+			id: 8,
+			name: "Clau Yagyagan",
+			imageURL: "img/organizers/clau.png"
 		}] 
 
 	const mentors = [
