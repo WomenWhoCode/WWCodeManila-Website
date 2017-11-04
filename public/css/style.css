@@ -320,6 +320,52 @@ a {
 	margin-top: 0;
 }
 
+.supporters_header h2 {
+	font-size: 30px;
+	margin-top:20px;
+}
+
+.supporters_header h4 {
+	font-size: 23px;
+}
+
+.supporters_body h3 {
+	text-align:center; 
+	font-size: 40px;
+}
+
+.supporters_body img {
+	display: block; 
+	margin: 0 auto;
+}
+
+.media_partners h3 {
+	font-size: 40px; 
+	margin-bottom: 30px;
+	margin-top: 0px;
+}
+
+.media_partners img {
+	margin-right: 20px;
+}
+
+.community_partners h3 {
+	font-size: 40px; 
+	margin-bottom: 30px;
+	margin-top: 0px;
+}
+
+.community_partners img {
+	margin-right: 20px;
+}
+
+.thank_you h1 {
+	text-align:center; 
+	font-size: 40px; 
+	margin-top:0px; 
+	margin-bottom:25px;
+}
+
 #kiddie {
 	margin-top: 20px;
 	margin-bottom: 0px;

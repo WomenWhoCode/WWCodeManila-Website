@@ -66,7 +66,98 @@ app.get('/participants', function(req, res) {
 })
 
 app.get('/supporters', function(req, res) {
-    res.render('supporters')
+
+	const platinum_advocate = [
+		{	
+			id: 1,
+			name: "Atlassian",
+			url: "https://atlassian.com",
+			imageURL: "img/supporters/company/Atlassian_Logo.svg"
+		}]
+
+	const inspire = [
+		{	
+			id: 1,
+			name: "Accenture",
+			url: "https://accenture.com",
+			imageURL: "img/supporters/company/accenture.png"
+		}]
+
+	const nourish = [
+		{	
+			id: 1,
+			name: "Zendesk",
+			url: "https://zendesk.com",
+			imageURL: "img/supporters/company/zendesk-125.png"
+		}]
+
+	const sustain = [
+		{	
+			id: 1,
+			name: "You",
+			url: "https://womenwhocode.com",
+			imageURL: ""
+		}]
+
+	const support = [
+		{	
+			id: 1,
+			name: "You",
+			url: "https://womenwhocode.com",
+			imageURL: ""
+		}]
+
+	const kiddie_hackathon = [
+		{	
+			id: 1,
+			name: "Power Mac Center",
+			url: "http://www.powermaccenter.com",
+			imageURL: "img/supporters/company/PMC.jpg"
+		}]
+
+	const media_partners = [
+		{	
+			id: 1,
+			name: "Manila Bulletin",
+			url: "https://mb.com.ph",
+			imageURL: "img/supporters/media/mb_logo.jpg"
+		}]
+
+	const community_partners = [
+		{	
+			id: 1,
+			name: "PyLadies",
+			url: "https://www.meetup.com/pyladiesmanila/",
+			imageURL: "img/supporters/community/PyLadies.jpg"
+		},
+		{	
+			id: 2,
+			name: "PythonPH",
+			url: "https://python.ph/",
+			imageURL: "img/supporters/community/PythonPH.png"
+		},
+		{	
+			id: 3,
+			name: "VRPH",
+			url: "https://www.facebook.com/vrphilippines/",
+			imageURL: "img/supporters/community/VRPH_Logo.png"
+		},
+		{	
+			id: 4,
+			name: "SwiftPH",
+			url: "http://Swift.PH",
+			imageURL: "img/supporters/community/SwiftPH_Logo.png"
+		}]
+
+	const special_thanks = [
+		{	
+			id: 1,
+			name: "You",
+			url: "https://womenwhocode.com",
+			imageURL: ""
+		}]
+
+    res.render('supporters', { platinum_advocate: platinum_advocate, inspire: inspire, nourish: nourish, sustain: sustain, support: support, kiddie_hackathon: kiddie_hackathon, media_partners: media_partners, community_partners: community_partners, special_thanks: special_thanks })
 })
 
 app.get('/travel', function(req, res) {
