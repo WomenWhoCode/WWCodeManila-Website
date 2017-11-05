@@ -89,6 +89,12 @@ app.get('/supporters', function(req, res) {
 			name: "Zendesk",
 			url: "https://zendesk.com",
 			imageURL: "img/supporters/company/zendesk-125.png"
+		},
+		{	
+			id: 2,
+			name: "Migo",
+			url: "https://www.migo.tv",
+			imageURL: "img/supporters/company/Migo_Logo.png"
 		}]
 
 	const sustain = [

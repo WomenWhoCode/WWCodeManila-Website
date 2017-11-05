@@ -26,9 +26,11 @@
 		<hr>
 
 		<h3>Nourish</h3>
-		<% nourish.forEach((nourish) => { %>
-			<a href="<%= nourish.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  nourish.imageURL %>" height="115px"></a>
-		<% }) %>
+		<div id="nourish_image">
+			<% nourish.forEach((nourish) => { %>
+				<a href="<%= nourish.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  nourish.imageURL %>" height="115px"></a>
+			<% }) %>
+		</div>
 		
 		<hr>
 
