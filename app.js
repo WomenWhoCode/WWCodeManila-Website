@@ -127,6 +127,12 @@ app.get('/supporters', function(req, res) {
 			name: "Manila Bulletin",
 			url: "https://mb.com.ph",
 			imageURL: "img/supporters/media/mb_logo.jpg"
+		},
+		{	
+			id: 2,
+			name: "e27",
+			url: "https://e27.co",
+			imageURL: "img/supporters/media/e27.png"
 		}]
 
 	const community_partners = [
