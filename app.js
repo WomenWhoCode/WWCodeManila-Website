@@ -183,6 +183,12 @@ app.get('/supporters', function(req, res) {
 			name: "Drupal Philippines",
 			url: "https://groups.drupal.org/philippines",
 			imageURL: "img/supporters/community/Drupal.png"
+		},
+		{	
+			id: 9,
+			name: "LaravelPH",
+			url: "https://www.facebook.com/laravelph",
+			imageURL: "img/supporters/community/LaravelPH.png"
 		}
 		]
 
