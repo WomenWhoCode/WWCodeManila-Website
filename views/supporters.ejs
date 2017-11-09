@@ -60,6 +60,14 @@
 		<hr>
 	</div>
 
+	<div class="special_thanks container">
+		<h3>Special thanks to the following for supporting tickets for our attendees:</h3>
+		<% special_thanks.forEach((special_thanks) => { %>
+			<a href="<%= special_thanks.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  special_thanks.imageURL %>" height="50px"></a>
+		<% }) %>
+		<hr>
+	</div>
+
 	<div class="thank_you container">
 		<h1>Thank you so much for the support!</h1>
 	</div>

@@ -164,9 +164,9 @@ app.get('/supporters', function(req, res) {
 	const special_thanks = [
 		{	
 			id: 1,
-			name: "You",
-			url: "https://womenwhocode.com",
-			imageURL: ""
+			name: "Pez.ai",
+			url: "https://pez.ai",
+			imageURL: "img/supporters/special_thanks/pez.png"
 		}]
 
     res.render('supporters', { platinum_advocate: platinum_advocate, inspire: inspire, nourish: nourish, sustain: sustain, support: support, kiddie_hackathon: kiddie_hackathon, media_partners: media_partners, community_partners: community_partners, special_thanks: special_thanks })
