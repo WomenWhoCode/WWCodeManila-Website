@@ -22,7 +22,7 @@ a {
 }
 
 #pic {
-	background-image: url("https://bytebucket.org/wwcodemanila/hackathon-assets/raw/faf47915b1f18fea8dbe31f47110ad22b7b043ed/backgroundImage2.png");
+	background-image: url("https://raw.githubusercontent.com/WomenWhoCode/WWCodeManila-Hackathon-Site/master/public/img/backgroundImage2.png");
     background-repeat: no-repeat;
     background-position: top center;
     height: 400px;
