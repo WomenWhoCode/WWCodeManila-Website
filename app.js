@@ -1,9 +1,29 @@
 const express = require('express')
 const ejsLayouts = require('express-ejs-layouts')
-
-const app = express()
+const oauth2 = require('simple-oauth2').create({
+  client: {
+    id: process.env.SLACK_CLIENT_ID,
+    secret: process.env.SLACK_CLIENT_SECRET
+  },
+  auth: {
+    tokenHost: 'https://slack.com',
+    authorizePath: '/oauth/authorize',
+    tokenPath: '/api/oauth.access'
+  }
+})
+const firebase = require('firebase-admin')
+firebase.initializeApp({
+  credential: firebase.credential.cert({
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+    privateKey: process.env.FIREBASE_PRIVATE_KEY
+  }),
+  databaseURL: process.env.FIREBASE_DATABASE_URL
+})
 
 const port = process.env.PORT || 3000
+
+const app = express()
 
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'))
@@ -217,6 +237,30 @@ app.get('/faq', function(req, res) {
 
 app.get(['/hackathon', '/join'], function(req, res) {
     res.render('join')
+})
+
+app.get('/login', function(req, res) {
+  res.redirect(oauth2.authorizationCode.authorizeURL({
+    redirect_uri: process.env.SLACK_REDIRECT_URI,
+    scope: 'identity.basic'
+  }))
+})
+
+app.get('/auth', function(req, res) {
+  const code = req.query.code;
+  const options = {
+    code: code,
+    redirect_uri: process.env.SLACK_REDIRECT_URI
+  }
+
+  oauth2.authorizationCode.getToken(options, (error, result) => {
+    if (error) {
+      return res.json(error);
+    } else {
+      token = oauth2.accessToken.create(result)
+      return res.status(200).json(token)
+    }
+  })
 })
 
 app.listen(port)
