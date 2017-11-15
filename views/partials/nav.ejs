@@ -17,10 +17,15 @@
     <li><a href="/supporters">Supporters</a></li>
     <li><a href="/travel">Travel</a></li>
     <li><a href="/faq">FAQ</a></li>
+    <% if (typeof user === 'undefined') { %>
     <li class="divider-vertical"></li>
     <li><a href="/hackathon">Join the Hackathon</a></li>
     <li class="divider-vertical"></li>
     <li><a href="/login">Participant's Area</a></li>
+    <% } else { %>
+    <li class="divider-vertical"></li>
+    <li><a href="/logout">Logout</a></li>
+    <% } %>   
   </ul>
 </div>
 </div>
