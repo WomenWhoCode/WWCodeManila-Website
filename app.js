@@ -40,25 +40,28 @@ const authenticated = function(req, res, next) {
 }
 
 const upsertUser = function(token) {
-  var user = token.user
   var promise = new Promise(function(resolve, reject) {
-    firebase.auth().updateUser(user.id, {
-      displayName: user.name
-    })
-      .then((record) => {
-        resolve(record)
-      }, (error) => {
-        firebase.auth().createUser({
-          uid: user.id,
-          displayName: user.name
-        })
-          .then((record) => {
-            resolve(record)
+    if (token.error || token.user == null || token.user.id == null) {
+      reject(token)
+    } else {
+      firebase.auth().updateUser(token.user.id, {
+        displayName: user.name
+      })
+        .then((record) => {
+          resolve(record)
+        }, (error) => {
+          firebase.auth().createUser({
+            uid: user.id,
+            displayName: user.name
           })
-      })
-      .catch((error) => {
-        reject(error)
-      })
+            .then((record) => {
+              resolve(record)
+            })
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    }
   })
 
   return promise
