@@ -40,19 +40,22 @@ const authenticated = function(req, res, next) {
 }
 
 const upsertUser = function(token) {
+  var user = token.user
   var promise = new Promise(function(resolve, reject) {
-    if (token.error || token.user == null || token.user.id == null) {
-      reject(token)
+    if (token.error || user == null || user.id == null) {
+      reject(token.error)
     } else {
-      firebase.auth().updateUser(token.user.id, {
-        displayName: user.name
+      firebase.auth().updateUser(user.id, {
+        displayName: user.name,
+        photoURL: user.image_72
       })
         .then((record) => {
           resolve(record)
         }, (error) => {
           firebase.auth().createUser({
             uid: user.id,
-            displayName: user.name
+            displayName: user.name,
+            photoURL: user.image_72
           })
             .then((record) => {
               resolve(record)
@@ -291,7 +294,7 @@ app.get(['/hackathon', '/join'], function(req, res) {
 app.get('/login', function(req, res) {
   res.redirect(oauth2.authorizationCode.authorizeURL({
     redirect_uri: process.env.SLACK_REDIRECT_URI,
-    scope: 'identity.basic'
+    scope: 'identity.basic,identity.avatar'
   }))
 })
 
