@@ -39,6 +39,16 @@ const authenticated = function(req, res, next) {
   }
 }
 
+const forceSSL = function(req, res, next) {
+  var insecure = req.headers['x-forwarded-proto'] != 'https'
+
+  if (app.get('env') != 'development' && insecure) {
+    res.redirect(301, "https://" + req.headers.host + req.originalUrl)
+  } else {
+    next()
+  }
+}
+
 const upsertUser = function(token) {
   var user = token.user
   var promise = new Promise(function(resolve, reject) {
@@ -74,11 +84,12 @@ const port = process.env.PORT || 3000
 const app = express()
 
 app.set('view engine', 'ejs')
-app.set('trust proxy', process.env.NODE_ENV !== 'development')
+app.set('trust proxy', app.get('env') != 'development')
 app.use(express.static(__dirname + '/public'))
+app.use(forceSSL);
 app.use(session({
   secret: process.env.SESSION_SECRET,
-  secure: process.env.NODE_ENV !== 'development'
+  secure: app.get('env') != 'development'
 }))
 
 app.get('/', function(req, res) {
