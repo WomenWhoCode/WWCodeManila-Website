@@ -56,3 +56,9 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# Editor file
+*.swp
+
+# OS-specific files
+*.DS_Store
