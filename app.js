@@ -132,7 +132,7 @@ app.get('/', function(req, res) {
     {
       id: 8,
       name: "Clau Yagyagan",
-      imageURL: "img/organizers/clau.png"
+      imageURL: "img/organizers/clau.jpg"
     }]
 
   const mentors = [
@@ -150,7 +150,6 @@ app.get('/participants', function(req, res) {
 })
 
 app.get('/supporters', function(req, res) {
-
   const platinum_advocate = [
     {
       id: 1,
@@ -234,45 +233,69 @@ app.get('/supporters', function(req, res) {
     },
     {
       id: 3,
+      name: "CipherMNL",
+      url: "https://www.facebook.com/ciphermnl",
+      imageURL: "img/supporters/community/Cipher.png"
+    },
+    {
+      id: 4,
       name: "PythonPH",
       url: "https://python.ph/",
       imageURL: "img/supporters/community/PythonPH.png"
     },
     {
-      id: 4,
+      id: 5,
       name: "VRPH",
       url: "https://www.facebook.com/vrphilippines/",
       imageURL: "img/supporters/community/VRPH_Logo.png"
     },
     {
-      id: 5,
+      id: 6,
       name: "SwiftPH",
       url: "http://Swift.PH",
       imageURL: "img/supporters/community/SwiftPH_Logo.png"
     },
     {
-      id: 6,
+      id: 7,
       name: "Philippine Android Developer Community (PADC)",
       url: "http://facebook.com/padcsummit/",
       imageURL: "img/supporters/community/PADC.png"
     },
     {
-      id: 7,
+      id: 8,
       name: "Philippine Web Designer (PWDO)",
       url: "http://facebook.com/padcsummit/",
       imageURL: "img/supporters/community/pwdo.png"
     },
     {
-      id: 8,
+      id: 9,
+      name: "Developers' Society",
+      url: "https://www.facebook.com/devsocietyph",
+      imageURL: "img/supporters/community/DevSoc.png"
+    },
+    {
+      id: 10,
       name: "Drupal Philippines",
       url: "https://groups.drupal.org/philippines",
       imageURL: "img/supporters/community/Drupal.png"
     },
     {
-      id: 9,
+      id: 11,
       name: "LaravelPH",
       url: "https://www.facebook.com/laravelph",
       imageURL: "img/supporters/community/LaravelPH.png"
+    },
+    {
+      id: 12,
+      name: "WordPress User Group PH",
+      url: "https://www.facebook.com/wpugph",
+      imageURL: "img/supporters/community/WordPress.jpg"
+    },
+    {
+      id: 13,
+      name: "UXPH",
+      url: "https://www.facebook.com/UXPhilippines/",
+      imageURL: "img/supporters/community/UXPH.png"
     }
   ]
 
