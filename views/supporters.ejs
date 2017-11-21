@@ -12,14 +12,14 @@
 
 	<div class="supporters_body container">
 		<h3>Platinum Advocate</h3>
-		<% platinum_advocate.forEach((platinum_advocate) => { %>
+		<% supporters.platinum.forEach((platinum_advocate) => { %>
 			<a href="<%= platinum_advocate.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  platinum_advocate.imageURL %>" height="200px"></a>
 		<% }) %>
 
 		<hr>
 
 		<h3>Inspire</h3>
-		<% inspire.forEach((inspire) => { %>
+		<% supporters.inspire.forEach((inspire) => { %>
 			<a href="<%= inspire.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  inspire.imageURL %>" height="100px"></a>
 		<% }) %>
 
@@ -27,7 +27,7 @@
 
 		<h3>Nourish</h3>
 		<div id="nourish_image">
-			<% nourish.forEach((nourish) => { %>
+			<% supporters.nourish.forEach((nourish) => { %>
 				<a href="<%= nourish.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  nourish.imageURL %>" height="115px"></a>
 			<% }) %>
 		</div>
@@ -36,7 +36,7 @@
 
 		<h3 id="kiddie">Kiddie Hackathon</h3>
 		<p>in partnership with PowerMac Center</p>
-		<% kiddie_hackathon.forEach((kiddie_hackathon) => { %>
+		<% supporters.kiddie_hackathon.forEach((kiddie_hackathon) => { %>
 			<a href="<%= kiddie_hackathon.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  kiddie_hackathon.imageURL %>" height="120px"></a>
 		<% }) %>
 
@@ -45,7 +45,7 @@
 
 	<div class="media_partners container">
 	    <h3>Media Partners</h3>
-		<% media_partners.forEach((media_partner) => { %>
+		<% supporters.media.forEach((media_partner) => { %>
 			<a href="<%= media_partner.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  media_partner.imageURL %>" height="120px"></a>
 		<% }) %>
 
@@ -54,7 +54,7 @@
 
 	<div class="community_partners container">
 		<h3>Community Partners</h3>
-		<% community_partners.forEach((community_partner) => { %>
+		<% supporters.community.forEach((community_partner) => { %>
 			<a href="<%= community_partner.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  community_partner.imageURL %>" height="120px"></a>
 		<% }) %>
 		<hr>
@@ -62,7 +62,7 @@
 
 	<div class="special_thanks container">
 		<h3>Special thanks to the following for supporting tickets for our attendees:</h3>
-		<% special_thanks.forEach((special_thanks) => { %>
+		<% supporters.special_thanks.forEach((special_thanks) => { %>
 			<a href="<%= special_thanks.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  special_thanks.imageURL %>" height="80px"></a>
 		<% }) %>
 		<hr>

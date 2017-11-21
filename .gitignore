@@ -58,7 +58,7 @@ typings/
 .env
 
 # Editor files
-*.swp
+*.sw?
 
 # OS-specific files
 *.DS_Store

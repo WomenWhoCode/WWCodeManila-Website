@@ -1,0 +1,121 @@
+{
+  "platinum": [
+    {
+      "name": "Atlassian",
+      "url": "https://atlassian.com",
+      "imageURL": "img/supporters/company/Atlassian_Logo.svg"
+    }
+  ],
+  "inspire": [
+    {
+      "name": "Accenture",
+      "url": "https://accenture.com",
+      "imageURL": "img/supporters/company/accenture.png"
+    }
+  ],
+  "nourish": [
+    {
+      "name": "Zendesk",
+      "url": "https://zendesk.com",
+      "imageURL": "img/supporters/company/zendesk-125.png"
+    },
+    {
+      "name": "Migo",
+      "url": "https://www.migo.tv",
+      "imageURL": "img/supporters/company/Migo_Logo.png"
+    }
+  ],
+  "kiddie_hackathon": [
+    {
+      "name": "Power Mac Center",
+      "url": "http://www.powermaccenter.com",
+      "imageURL": "img/supporters/company/PMC.jpg"
+    }
+  ],
+  "media": [
+    {
+      "name": "Manila Bulletin",
+      "url": "https://mb.com.ph",
+      "imageURL": "img/supporters/media/mb_logo.jpg"
+    },
+    {
+      "name": "e27",
+      "url": "https://e27.co",
+      "imageURL": "img/supporters/media/e27.png"
+    }
+  ],
+  "community": [
+    {
+      "name": "PyLadies",
+      "url": "https://www.meetup.com/pyladiesmanila/",
+      "imageURL": "img/supporters/community/PyLadies.jpg"
+    },
+    {
+      "name": "Coding Girls",
+      "url": "https://www.facebook.com/coding.girls.manila//",
+      "imageURL": "img/supporters/community/coding_girls.png"
+    },
+    {
+      "name": "CipherMNL",
+      "url": "https://www.facebook.com/ciphermnl",
+      "imageURL": "img/supporters/community/Cipher.png"
+    },
+    {
+      "name": "PythonPH",
+      "url": "https://python.ph/",
+      "imageURL": "img/supporters/community/PythonPH.png"
+    },
+    {
+      "name": "VRPH",
+      "url": "https://www.facebook.com/vrphilippines/",
+      "imageURL": "img/supporters/community/VRPH_Logo.png"
+    },
+    {
+      "name": "SwiftPH",
+      "url": "http://Swift.PH",
+      "imageURL": "img/supporters/community/SwiftPH_Logo.png"
+    },
+    {
+      "name": "Philippine Android Developer Community (PADC)",
+      "url": "http://facebook.com/padcsummit/",
+      "imageURL": "img/supporters/community/PADC.png"
+    },
+    {
+      "name": "Philippine Web Designer (PWDO)",
+      "url": "http://facebook.com/padcsummit/",
+      "imageURL": "img/supporters/community/pwdo.png"
+    },
+    {
+      "name": "Developers' Society",
+      "url": "https://www.facebook.com/devsocietyph",
+      "imageURL": "img/supporters/community/DevSoc.png"
+    },
+    {
+      "name": "Drupal Philippines",
+      "url": "https://groups.drupal.org/philippines",
+      "imageURL": "img/supporters/community/Drupal.png"
+    },
+    {
+      "name": "LaravelPH",
+      "url": "https://www.facebook.com/laravelph",
+      "imageURL": "img/supporters/community/LaravelPH.png"
+    },
+    {
+      "name": "WordPress User Group PH",
+      "url": "https://www.facebook.com/wpugph",
+      "imageURL": "img/supporters/community/WordPress.jpg"
+    },
+    {
+      "name": "UXPH",
+      "url": "https://www.facebook.com/UXPhilippines/",
+      "imageURL": "img/supporters/community/UXPH.png"
+    }
+  ],
+  "special_thanks": [
+    {
+      "name": "Pez.ai",
+      "url": "https://pez.ai",
+      "imageURL": "img/supporters/special_thanks/pez.png"
+    }
+  ]
+}
