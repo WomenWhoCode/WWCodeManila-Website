@@ -56,26 +56,53 @@ const upsertUser = function(token) {
     if (token.error || user == null || user.id == null) {
       reject(token.error)
     } else {
-      firebase.auth().updateUser(user.id, {
-        displayName: user.name,
-        photoURL: user.image_72
-      })
+      firebase.auth().getUserByEmail(user.email)
         .then((record) => {
-          resolve(record)
-        }, (error) => {
-          firebase.auth().createUser({
-            uid: user.id,
+          firebase.auth().updateUser(record.uid, {
             displayName: user.name,
             photoURL: user.image_72
           })
             .then((record) => {
-              resolve(record)
+              resolve({ token: token, uid: record.uid })
+            })
+        }, (error) => {
+          firebase.auth().createUser({
+            email: user.email,
+            emailVerified: true,
+            displayName: user.name,
+            photoURL: user.image_72
+          })
+            .then((record) => {
+              resolve({ token: token, uid: record.uid })
+            })
+            .catch((error) => {
+              reject(error)
             })
         })
         .catch((error) => {
           reject(error)
         })
     }
+  })
+}
+
+const updateCustomFields = function(data) {
+  var token = data.token
+  var user = token.user
+
+  return new Promise(function(resolve, reject) {
+    var users = firebase.database().ref("users")
+
+    users.child(data.uid).update({
+      slack_id: user.id,
+      email: user.email
+    })
+      .then(() => {
+        resolve(data.uid)
+      })
+      .catch((error) => {
+        reject(error)
+      })
   })
 }
 
@@ -146,8 +173,9 @@ app.get('/auth', function(req, res, next) {
 
   oauth2.authorizationCode.getToken(options)
     .then(upsertUser)
-    .then(function(user) {
-      req.session.user = user.uid
+    .then(updateCustomFields)
+    .then(function(uid) {
+      req.session.user = uid
       res.redirect('/dashboard')
     })
     .catch((error) => {
