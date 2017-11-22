@@ -13,8 +13,16 @@
 <% } else { %>
 <p>You don't have a team yet.  Please join <a href="slack://channel?id=C7EQDJ75Z&team=T78QY25EJ">#looking-for-a-team</a> to look for teammates!</p>
 <% } %>
-</div>
-</section>
+
+<h2>Devices</h2>
+
+<!-- Do not allow edit when user is registered -->
+<% if (!user.firebase.nfc_tag) { %>
+  <%- include('partials/device-form', { id: 'addDevice', hidden: true, device: {} } ) %>
+  <button id="registerDeviceButton" class="btn btn-default" onClick="showAddDeviceForm()">
+    Register a device
+  </button>
+<% } %>
 
 <% include partials/footer %>
 <% include partials/scripts %>
