@@ -3,7 +3,16 @@
 
 <section id="dashboard">
 <div class="container">
-<h1>HELLO <%= user.displayName %> YOU BEAUTIFUL PERSON</h1>
+<h1>Participant's Area</h1>
+<p>You are logged in as <strong><%= user.displayName %></strong>.  Hello, you beautiful person!</p>
+
+<% if (user.firebase.type == 'organizer') { %>
+<p>Hello, organizer! Wala kang kasing ganda.</p>
+<% } else if (user.firebase.team) { %>
+<p>You are a member of a team.</p>
+<% } else { %>
+<p>You don't have a team yet.  Please join <a href="slack://channel?id=C7EQDJ75Z&team=T78QY25EJ">#looking-for-a-team</a> to look for teammates!</p>
+<% } %>
 </div>
 </section>
 
