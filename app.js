@@ -94,6 +94,7 @@ const updateCustomFields = function(data) {
     var users = firebase.database().ref("users")
 
     users.child(data.uid).update({
+      name: user.name,
       slack_id: user.id,
       email: user.email
     })
