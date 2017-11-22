@@ -29,7 +29,11 @@ const authenticated = function(req, res, next) {
     firebase.auth().getUser(req.session.user)
       .then((record) => {
         req.user = record
-        next()
+        firebase.database().ref("users").child(record.uid).once("value")
+          .then((record) => {
+            req.user.firebase = record.val()
+            next()
+          })
       })
       .catch((error) => {
         next(error)
