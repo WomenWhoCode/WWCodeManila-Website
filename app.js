@@ -51,7 +51,8 @@ const forceSSL = function(req, res, next) {
 
 const upsertUser = function(token) {
   var user = token.user
-  var promise = new Promise(function(resolve, reject) {
+
+  return new Promise(function(resolve, reject) {
     if (token.error || user == null || user.id == null) {
       reject(token.error)
     } else {
@@ -76,8 +77,6 @@ const upsertUser = function(token) {
         })
     }
   })
-
-  return promise
 }
 
 const port = process.env.PORT || 3000
@@ -133,7 +132,8 @@ app.get(['/hackathon', '/join'], function(req, res) {
 app.get('/login', function(req, res) {
   res.redirect(oauth2.authorizationCode.authorizeURL({
     redirect_uri: process.env.SLACK_REDIRECT_URI,
-    scope: 'identity.basic,identity.avatar'
+    scope: 'identity.basic,identity.email,identity.avatar',
+    team: 'T78QY25EJ'
   }))
 })
 
