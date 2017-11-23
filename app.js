@@ -200,19 +200,24 @@ app.get('/logout', function(req, res) {
 app.all('/dashboard', authenticated)
 app.all('/dashboard/*', authenticated)
 app.all('/devices', authenticated)
+app.all('/devices/*', authenticated)
 
 app.get('/dashboard', function(req, res) {
   const deviceIds = req.user.firebase.devices || []
 
   const devicePromises = deviceIds.map((deviceId) => {
-    return firebase.database().ref('devices').child(deviceId).once('value')
+    return new Promise((resolve) => {
+      firebase.database().ref('devices').child(deviceId)
+        .once('value', (record) => {
+          var data = record.val()
+          data.uid = deviceId
+          resolve(data)
+        })
+    })
   })
 
   Promise.all(devicePromises)
-    .then((deviceRefs) => {
-      const devices = deviceRefs.map((deviceRef) => {
-        return deviceRef.val()
-      })
+    .then((devices) => {
       res.render('dashboard', { user: req.user, devices: devices })
     })
 })
@@ -236,6 +241,35 @@ app.post('/devices', function(req, res) {
   })
 
   res.redirect('/dashboard')
+})
+
+app.delete('/devices/:deviceId', function(req, res) {
+  const users = firebase.database().ref('users')
+  const devices = firebase.database().ref('devices')
+
+  const deviceIds = req.user.firebase.devices || []
+  const deviceId = req.params.deviceId
+  const deviceIndex = deviceIds.indexOf(deviceId)
+
+  if (deviceIndex > -1) {
+    deviceIds.splice(deviceIndex, 1)
+
+    users.child(req.user.uid).update({
+      devices: deviceIds
+    })
+      .then(() => {
+        devices.child(deviceId).remove()
+      })
+      .then(() => {
+        // Return 303 status as workaround for DELETE redirection
+        // Client will receive this as 200 though
+        res.redirect(303, '/dashboard')
+      })
+  } else {
+    // Return 303 status as workaround for DELETE redirection
+    // Client will receive this as 200 though
+    res.redirect(303, '/dashboard')
+  }
 })
 
 app.listen(port)

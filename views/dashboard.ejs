@@ -22,9 +22,9 @@
           <strong><%= device.type %></strong>:&nbsp;
           <%= device.description %>
 
-          <div class="pull-right">
-            <button class="btn btn-danger btn-sm">Delete</button>
-          </div>
+          <button class="btn btn-danger btn-sm pull-right" onClick="deleteDevice('<%= device.uid %>')" data-device-id="<%= device.uid %>">
+            Delete
+          </button>
         </li>
       <% }) %>
     </ul>
