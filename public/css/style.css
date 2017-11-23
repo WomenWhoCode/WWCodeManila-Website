@@ -33,15 +33,15 @@ a {
 }
 
 #logo-top-pic img {
-  display: block; 
-  margin-left: auto; 
-  margin-right: auto; 
-  margin-top: 50px; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
   margin-bottom: 30px;
 }
 
 #logo-top-pic h3 {
-  margin-top: 0; 
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -96,7 +96,7 @@ a {
 
 /* Collapsible NavBar */
 #topNavBar {
-  background-color: white; 
+  background-color: white;
 }
 
 #topNavBar ul {
@@ -334,17 +334,17 @@ a {
 }
 
 .supporters_body h3 {
-  text-align:center; 
+  text-align:center;
   font-size: 40px;
 }
 
 .supporters_body img {
-  display: block; 
+  display: block;
   margin: 0 auto;
 }
 
 .supporters_body p {
-  text-align:center; 
+  text-align:center;
 }
 
 #nourish_image{
@@ -361,7 +361,7 @@ a {
 }
 
 .media_partners h3 {
-  font-size: 40px; 
+  font-size: 40px;
   margin-bottom: 30px;
   margin-top: 0px;
 }
@@ -371,7 +371,7 @@ a {
 }
 
 .community_partners h3 {
-  font-size: 40px; 
+  font-size: 40px;
   margin-bottom: 30px;
   margin-top: 0px;
 }
@@ -382,15 +382,15 @@ a {
 }
 
 .special_thanks h3 {
-  font-size: 20px; 
+  font-size: 20px;
   margin-bottom: 30px;
   margin-top: 0px;
 }
 
 .thank_you h1 {
-  text-align:center; 
-  font-size: 40px; 
-  margin-top:0px; 
+  text-align:center;
+  font-size: 40px;
+  margin-top:0px;
   margin-bottom:25px;
 }
 
@@ -468,13 +468,34 @@ hr {
 }
 
 .eventbrite {
-  width: 100%; 
+  width: 100%;
   text-align: center;
 }
 
 .eventbrite iframe {
-  height: 900px; 
+  height: 900px;
   width: 90%;
+}
+
+/* Participants Area */
+.user-profile {
+  padding: 10px 0;
+}
+
+.user-profile .user-avatar {
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 96px;
+}
+
+.user-profile .user-name {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.user-profile .user-team {
+  font-weight: 500;
+  font-size: 24px;
 }
 
 /* Footer */
@@ -496,7 +517,7 @@ hr {
 
 @media (max-width: 1150px) {
   .eventbrite iframe {
-    height: 950px; 
+    height: 950px;
     width: 90%;
   }
 }
@@ -518,7 +539,7 @@ hr {
   }
 
   .eventbrite iframe {
-    height: 1000px; 
+    height: 1000px;
     width: 85%;
   }
 
@@ -568,7 +589,7 @@ hr {
   }
 
   .eventbrite iframe {
-    height: 1050px; 
+    height: 1050px;
     width: 85%;
   }
 }
@@ -656,7 +677,7 @@ hr {
   }
 
   .eventbrite iframe {
-    height: 1300px; 
+    height: 1300px;
     width: 80%;
   }
 }
@@ -665,7 +686,7 @@ hr {
 @media (max-width: 480px) {
 
   .eventbrite iframe {
-    height: 1400px; 
+    height: 1400px;
     width: 80%;
   }
 
