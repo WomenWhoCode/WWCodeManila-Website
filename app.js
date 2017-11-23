@@ -202,26 +202,25 @@ app.all('/dashboard/*', authenticated)
 app.all('/devices', authenticated)
 
 app.get('/dashboard', function(req, res) {
-  res.render('dashboard', { user: req.user })
+  res.render('dashboard', { user: req.user, devices: deviceList })
 })
 
 app.post('/devices', function(req, res) {
-  var devices = firebase.database().ref("devices")
-  var users = firebase.database().ref("users")
-  var userUid = req.user.uid
+  const devices = firebase.database().ref('devices')
+  const users = firebase.database().ref('users')
+  const userUid = req.user.uid
+  const userDevices = req.user.firebase.devices || []
 
-  var newDevice = devices.push({
+  const newDevice = devices.push({
     description: req.body.description,
     type: req.body.type,
     owner: userUid
   })
 
-  // Add new device to user's list of devices
-  var devicesHash = {}
-  devicesHash[newDevice.key] = true
+  userDevices.push(newDevice.key)
 
   users.child(userUid).update({
-    devices: devicesHash
+    devices: userDevices
   })
 
   res.redirect('/dashboard')
