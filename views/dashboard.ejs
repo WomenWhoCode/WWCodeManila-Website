@@ -17,14 +17,12 @@
     <h2>Devices</h2>
 
     <!-- Do not allow edit when user is registered -->
-    <% if (!user.firebase.nfc_tag) { %>
-      <form id="addDevice" class="form hidden" action="/devices", method="POST">
-        <%- include('partials/device-form', { device: {} } ) %>
-      </form>
-      <button id="registerDeviceButton" class="btn btn-default" onClick="showAddDeviceForm()">
-        Register a device
-      </button>
-    <% } %>
+    <form id="addDevice" class="form hidden" action="/devices", method="POST">
+      <%- include('partials/device-form', { device: {} } ) %>
+    </form>
+    <button id="registerDeviceButton" class="btn btn-default" onClick="showAddDeviceForm()">
+      Register a device
+    </button>
   </div>
 <section>
 

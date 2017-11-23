@@ -1,6 +1,7 @@
 const express = require('express')
 const ejs = require('express-ejs-layouts')
 const session = require('cookie-session')
+const bodyParser = require('body-parser')
 
 const oauth2 = require('simple-oauth2').create({
   client: {
@@ -125,6 +126,9 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   secure: app.get('env') != 'development'
 }))
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
 
 app.get('/', function(req, res) {
   const mentors = [
@@ -195,9 +199,32 @@ app.get('/logout', function(req, res) {
 
 app.all('/dashboard', authenticated)
 app.all('/dashboard/*', authenticated)
+app.all('/devices', authenticated)
 
 app.get('/dashboard', function(req, res) {
   res.render('dashboard', { user: req.user })
+})
+
+app.post('/devices', function(req, res) {
+  var devices = firebase.database().ref("devices")
+  var users = firebase.database().ref("users")
+  var userUid = req.user.uid
+
+  var newDevice = devices.push({
+    description: req.body.description,
+    type: req.body.type,
+    owner: userUid
+  })
+
+  // Add new device to user's list of devices
+  var devicesHash = {}
+  devicesHash[newDevice.key] = true
+
+  users.child(userUid).update({
+    devices: devicesHash
+  })
+
+  res.redirect('/dashboard')
 })
 
 app.listen(port)
