@@ -2,27 +2,31 @@
 <% include partials/nav %>
 
 <section id="dashboard">
-<div class="container">
-<h1>Participant's Area</h1>
-<p>You are logged in as <strong><%= user.displayName %></strong>.  Hello, you beautiful person!</p>
+  <div class="container">
+    <h1>Participant's Area</h1>
+    <p>You are logged in as <strong><%= user.displayName %></strong>.  Hello, you beautiful person!</p>
 
-<% if (user.firebase.type == 'organizer') { %>
-<p>Hello, organizer! Wala kang kasing ganda.</p>
-<% } else if (user.firebase.team) { %>
-<p>You are a member of a team.</p>
-<% } else { %>
-<p>You don't have a team yet.  Please join <a href="slack://channel?id=C7EQDJ75Z&team=T78QY25EJ">#looking-for-a-team</a> to look for teammates!</p>
-<% } %>
+    <% if (user.firebase.type == 'organizer') { %>
+      <p>Hello, organizer! Wala kang kasing ganda.</p>
+    <% } else if (user.firebase.team) { %>
+      <p>You are a member of a team.</p>
+    <% } else { %>
+      <p>You don't have a team yet.  Please join <a href="slack://channel?id=C7EQDJ75Z&team=T78QY25EJ">#looking-for-a-team</a> to look for teammates!</p>
+    <% } %>
 
-<h2>Devices</h2>
+    <h2>Devices</h2>
 
-<!-- Do not allow edit when user is registered -->
-<% if (!user.firebase.nfc_tag) { %>
-  <%- include('partials/device-form', { id: 'addDevice', hidden: true, device: {} } ) %>
-  <button id="registerDeviceButton" class="btn btn-default" onClick="showAddDeviceForm()">
-    Register a device
-  </button>
-<% } %>
+    <!-- Do not allow edit when user is registered -->
+    <% if (!user.firebase.nfc_tag) { %>
+      <form id="addDevice" class="form hidden" action="/devices", method="POST">
+        <%- include('partials/device-form', { device: {} } ) %>
+      </form>
+      <button id="registerDeviceButton" class="btn btn-default" onClick="showAddDeviceForm()">
+        Register a device
+      </button>
+    <% } %>
+  </div>
+<section>
 
 <% include partials/footer %>
 <% include partials/scripts %>
