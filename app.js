@@ -29,7 +29,11 @@ const authenticated = function(req, res, next) {
     firebase.auth().getUser(req.session.user)
       .then((record) => {
         req.user = record
-        next()
+        firebase.database().ref("users").child(record.uid).once("value")
+          .then((record) => {
+            req.user.firebase = record.val()
+            next()
+          })
       })
       .catch((error) => {
         next(error)
@@ -51,24 +55,32 @@ const forceSSL = function(req, res, next) {
 
 const upsertUser = function(token) {
   var user = token.user
-  var promise = new Promise(function(resolve, reject) {
+
+  return new Promise(function(resolve, reject) {
     if (token.error || user == null || user.id == null) {
       reject(token.error)
     } else {
-      firebase.auth().updateUser(user.id, {
-        displayName: user.name,
-        photoURL: user.image_72
-      })
+      firebase.auth().getUserByEmail(user.email)
         .then((record) => {
-          resolve(record)
-        }, (error) => {
-          firebase.auth().createUser({
-            uid: user.id,
+          firebase.auth().updateUser(record.uid, {
             displayName: user.name,
             photoURL: user.image_72
           })
             .then((record) => {
-              resolve(record)
+              resolve({ token: token, uid: record.uid })
+            })
+        }, (error) => {
+          firebase.auth().createUser({
+            email: user.email,
+            emailVerified: true,
+            displayName: user.name,
+            photoURL: user.image_72
+          })
+            .then((record) => {
+              resolve({ token: token, uid: record.uid })
+            })
+            .catch((error) => {
+              reject(error)
             })
         })
         .catch((error) => {
@@ -76,8 +88,27 @@ const upsertUser = function(token) {
         })
     }
   })
+}
 
-  return promise
+const updateCustomFields = function(data) {
+  var token = data.token
+  var user = token.user
+
+  return new Promise(function(resolve, reject) {
+    var users = firebase.database().ref("users")
+
+    users.child(data.uid).update({
+      name: user.name,
+      slack_id: user.id,
+      email: user.email
+    })
+      .then(() => {
+        resolve(data.uid)
+      })
+      .catch((error) => {
+        reject(error)
+      })
+  })
 }
 
 const port = process.env.PORT || 3000
@@ -133,7 +164,8 @@ app.get(['/hackathon', '/join'], function(req, res) {
 app.get('/login', function(req, res) {
   res.redirect(oauth2.authorizationCode.authorizeURL({
     redirect_uri: process.env.SLACK_REDIRECT_URI,
-    scope: 'identity.basic,identity.avatar'
+    scope: 'identity.basic,identity.email,identity.avatar',
+    team: 'T78QY25EJ'
   }))
 })
 
@@ -146,8 +178,9 @@ app.get('/auth', function(req, res, next) {
 
   oauth2.authorizationCode.getToken(options)
     .then(upsertUser)
-    .then(function(user) {
-      req.session.user = user.uid
+    .then(updateCustomFields)
+    .then(function(uid) {
+      req.session.user = uid
       res.redirect('/dashboard')
     })
     .catch((error) => {
