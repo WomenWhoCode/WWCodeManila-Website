@@ -3,16 +3,13 @@
 
 <section id="dashboard">
   <div class="container">
-    <h1>Participant's Area</h1>
-    <p>You are logged in as <strong><%= user.displayName %></strong>.  Hello, you beautiful person!</p>
-
-    <% if (user.firebase.type == 'organizer') { %>
-      <p>Hello, organizer! Wala kang kasing ganda.</p>
-    <% } else if (user.firebase.team) { %>
-      <p>You are a member of a team.</p>
-    <% } else { %>
-      <p>You don't have a team yet.  Please join <a href="slack://channel?id=C7EQDJ75Z&team=T78QY25EJ">#looking-for-a-team</a> to look for teammates!</p>
-    <% } %>
+    <div class="row user-profile">
+      <img src="<%= user.photoURL %>" alt="your photo" class="user-avatar pull-left">
+      <div>
+        <p class="user-name"><%= user.displayName %></p>
+        <p class="user-team"><%= user.team || "No team yet. Please join a team." %></p>
+      </div>
+    </div>
 
     <h2>Devices</h2>
 

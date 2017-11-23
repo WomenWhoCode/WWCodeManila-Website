@@ -25,6 +25,23 @@ firebase.initializeApp({
   databaseURL: process.env.FIREBASE_DATABASE_URL
 })
 
+const getUserTeam = function(user) {
+  if (!user.type || user.type.match(/^participant$/i)) {
+    // TODO: Lookup team
+    return null
+  } else if (user.type.match(/^organizer$/i)) {
+    return "Organizers"
+  } else if (user.type.match(/^volunteer$/i)) {
+    return "Volunteers"
+  } else if (user.type.match(/^mentor$/i)) {
+    return "Mentors"
+  } else if (user.type.match(/^supporter$/i)) {
+    return "Supporters"
+  } else if (user.type.match(/^media$/i)) {
+    return "Media"
+  }
+}
+
 const authenticated = function(req, res, next) {
   if (req.session.user) {
     firebase.auth().getUser(req.session.user)
@@ -33,6 +50,7 @@ const authenticated = function(req, res, next) {
         firebase.database().ref("users").child(record.uid).once("value")
           .then((record) => {
             req.user.firebase = record.val()
+            req.user.team = getUserTeam(req.user.firebase)
             next()
           })
       })
@@ -65,7 +83,7 @@ const upsertUser = function(token) {
         .then((record) => {
           firebase.auth().updateUser(record.uid, {
             displayName: user.name,
-            photoURL: user.image_72
+            photoURL: user.image_192
           })
             .then((record) => {
               resolve({ token: token, uid: record.uid })
