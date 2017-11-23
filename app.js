@@ -202,7 +202,19 @@ app.all('/dashboard/*', authenticated)
 app.all('/devices', authenticated)
 
 app.get('/dashboard', function(req, res) {
-  res.render('dashboard', { user: req.user, devices: deviceList })
+  const deviceIds = req.user.firebase.devices || []
+
+  const devicePromises = deviceIds.map((deviceId) => {
+    return firebase.database().ref('devices').child(deviceId).once('value')
+  })
+
+  Promise.all(devicePromises)
+    .then((deviceRefs) => {
+      const devices = deviceRefs.map((deviceRef) => {
+        return deviceRef.val()
+      })
+      res.render('dashboard', { user: req.user, devices: devices })
+    })
 })
 
 app.post('/devices', function(req, res) {

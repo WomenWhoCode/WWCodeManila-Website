@@ -16,6 +16,19 @@
 
     <h2>Devices</h2>
 
+    <ul class="list-group">
+      <% devices.map((device) => { %>
+        <li class="list-group-item">
+          <strong><%= device.type %></strong>:&nbsp;
+          <%= device.description %>
+
+          <div class="pull-right">
+            <button class="btn btn-danger btn-sm">Delete</button>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+
     <!-- Do not allow edit when user is registered -->
     <form id="addDevice" class="form hidden" action="/devices", method="POST">
       <%- include('partials/device-form', { device: {} } ) %>
