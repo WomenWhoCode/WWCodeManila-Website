@@ -19,20 +19,25 @@
           <strong><%= device.type %></strong>:&nbsp;
           <%= device.description %>
 
-          <button class="btn btn-danger btn-sm pull-right" onClick="deleteDevice('<%= device.uid %>')" data-device-id="<%= device.uid %>">
-            Delete
-          </button>
+          <!-- Do not allow edit when user is registered -->
+          <% if (!user.firebase.nfc_tag) { %>
+            <button class="btn btn-danger btn-sm pull-right" onClick="deleteDevice('<%= device.uid %>')" data-device-id="<%= device.uid %>">
+               Delete
+            </button>
+          <% } %>
         </li>
       <% }) %>
     </ul>
 
     <!-- Do not allow edit when user is registered -->
-    <form id="addDevice" class="form hidden" action="/devices", method="POST">
-      <%- include('partials/device-form', { device: {} } ) %>
-    </form>
-    <button id="registerDeviceButton" class="btn btn-default" onClick="showAddDeviceForm()">
-      Register a device
-    </button>
+    <% if (!user.firebase.nfc_tag) { %>
+      <form id="addDevice" class="form hidden" action="/devices", method="POST">
+        <%- include('partials/device-form', { device: {} } ) %>
+      </form>
+      <button id="registerDeviceButton" class="btn btn-default" onClick="showAddDeviceForm()">
+        Register a device
+      </button>
+    <% } %>
   </div>
 <section>
 
