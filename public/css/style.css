@@ -94,6 +94,15 @@ a {
   margin-left: 30px;
 }
 
+.navbar-btn {
+  margin-top: 0;
+}
+
+.navbar-btn .btn {
+  margin: 0;
+  border: 0;
+}
+
 /* Collapsible NavBar */
 #topNavBar {
   background-color: white;
