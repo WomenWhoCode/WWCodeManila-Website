@@ -94,6 +94,15 @@ a {
   margin-left: 30px;
 }
 
+.navbar-btn {
+  margin-top: 0;
+}
+
+.navbar-btn .btn {
+  margin: 0;
+  border: 0;
+}
+
 /* Collapsible NavBar */
 #topNavBar {
   background-color: white;
@@ -496,6 +505,10 @@ hr {
 .user-profile .user-team {
   font-weight: 500;
   font-size: 24px;
+}
+
+.device-item .btn {
+  margin-top: -5px;
 }
 
 /* Footer */
