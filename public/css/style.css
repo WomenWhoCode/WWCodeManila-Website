@@ -498,6 +498,10 @@ hr {
   font-size: 24px;
 }
 
+.device-item .btn {
+  margin-top: -5px;
+}
+
 /* Footer */
 .footer {
   margin-top: 20px
