@@ -246,17 +246,19 @@ app.post('/devices', function(req, res) {
   const userUid = req.user.uid
   const userDevices = req.user.firebase.devices || []
 
-  const newDevice = devices.push({
-    description: req.body.description,
-    type: req.body.type,
-    owner: userUid
-  })
+  if (!req.user.firebase.nfc_tag) {
+    const newDevice = devices.push({
+      description: req.body.description,
+      type: req.body.type,
+      owner: userUid
+    })
 
-  userDevices.push(newDevice.key)
+    userDevices.push(newDevice.key)
 
-  users.child(userUid).update({
-    devices: userDevices
-  })
+    users.child(userUid).update({
+      devices: userDevices
+    })
+  }
 
   res.redirect('/dashboard')
 })
@@ -269,25 +271,26 @@ app.delete('/devices/:deviceId', function(req, res) {
   const deviceId = req.params.deviceId
   const deviceIndex = deviceIds.indexOf(deviceId)
 
-  if (deviceIndex > -1) {
-    deviceIds.splice(deviceIndex, 1)
-
-    users.child(req.user.uid).update({
-      devices: deviceIds
-    })
-      .then(() => {
-        devices.child(deviceId).remove()
-      })
-      .then(() => {
-        // Return 303 status as workaround for DELETE redirection
-        // Client will receive this as 200 though
-        res.redirect(303, '/dashboard')
-      })
-  } else {
+  if (deviceIndex === -1 || req.user.firebase.nfc_tag) {
     // Return 303 status as workaround for DELETE redirection
     // Client will receive this as 200 though
     res.redirect(303, '/dashboard')
+    return
   }
+
+  deviceIds.splice(deviceIndex, 1)
+
+  users.child(req.user.uid).update({
+    devices: deviceIds
+  })
+    .then(() => {
+      devices.child(deviceId).remove()
+    })
+    .then(() => {
+      // Return 303 status as workaround for DELETE redirection
+      // Client will receive this as 200 though
+      res.redirect(303, '/dashboard')
+    })
 })
 
 app.listen(port)
