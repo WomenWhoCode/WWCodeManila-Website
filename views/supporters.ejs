@@ -31,7 +31,22 @@
 				<a href="<%= nourish.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  nourish.imageURL %>" height="115px"></a>
 			<% }) %>
 		</div>
-		
+
+		<hr>
+
+        <h3>Sustain</h3>
+		<% supporters.sustain.forEach((sustain) => { %>
+			<a href="<%= sustain.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  sustain.imageURL %>" height="115px"></a>
+		<% }) %>
+
+		<hr>
+
+		<h3>Support</h3>
+		<% supporters.support.forEach((support) => { %>
+			<a href="<%= support.url %>" target="_blank" rel="noopener noreferrer"><img src="<%=  support.imageURL %>" height="115px"></a>
+		<% }) %>
+
+
 		<hr>
 
 		<h3 id="kiddie">Kiddie Hackathon</h3>

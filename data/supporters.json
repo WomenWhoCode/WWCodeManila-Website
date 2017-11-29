@@ -25,6 +25,20 @@
       "imageURL": "img/supporters/company/Migo_Logo.png"
     }
   ],
+  "sustain": [
+    {
+      "name": "Glossier",
+      "url": "https://www.glossier.com/",
+      "imageURL": "img/supporters/company/Glossier.png"
+    }
+  ],
+  "support": [
+    {
+      "name": "Canva",
+      "url": "https://www.canva.com/",
+      "imageURL": "img/supporters/company/Canva.png"
+    }
+  ],
   "kiddie_hackathon": [
     {
       "name": "Power Mac Center",
@@ -42,6 +56,11 @@
       "name": "e27",
       "url": "https://e27.co",
       "imageURL": "img/supporters/media/e27.png"
+    },
+    {
+      "name": "Rappler",
+      "url": "https://rappler.com",
+      "imageURL": "img/supporters/media/Rappler.png"
     }
   ],
   "community": [
@@ -116,6 +135,11 @@
       "name": "Pez.ai",
       "url": "https://pez.ai",
       "imageURL": "img/supporters/special_thanks/pez.png"
+    },
+    {
+      "name": "Macquarie Philippines",
+      "url": "https://www.macquarie.com",
+      "imageURL": "img/supporters/special_thanks/Macquarie.png"
     }
   ]
 }
