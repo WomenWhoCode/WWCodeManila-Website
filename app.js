@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config()
 const express = require('express')
 const ejs = require('express-ejs-layouts')
 const session = require('cookie-session')
