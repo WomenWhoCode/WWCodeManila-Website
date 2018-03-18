@@ -17,6 +17,8 @@ const forceSSL = function(req, res, next) {
 const port = process.env.PORT || 8080
 const app = express()
 
+const events = require('./data/her2point0/events.json')
+
 app.set('view engine', 'ejs')
 app.set('trust proxy', app.get('env') != 'development')
 app.use(express.static(__dirname + '/public'))
@@ -32,7 +34,7 @@ app.use(bodyParser.urlencoded({
 var hackathonRoutes = require('./routers/hackathon')
 
 app.get('/', function(req, res) {
-  res.render('2018/2018-her-index')
+  res.render('2018/2018-her-index', { events: events })
 })
 
 app.use('/2017/hackathon', hackathonRoutes)
