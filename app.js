@@ -17,13 +17,10 @@ const forceSSL = function(req, res, next) {
 const port = process.env.PORT || 8080
 const app = express()
 
-const organizers = require('./data/organizers.json')
-const supporters = require('./data/supporters.json')
-
 app.set('view engine', 'ejs')
 app.set('trust proxy', app.get('env') != 'development')
 app.use(express.static(__dirname + '/public'))
-app.use(forceSSL);
+//app.use(forceSSL);
 app.use(session({
   secret: process.env.SESSION_SECRET,
   secure: app.get('env') != 'development'
@@ -32,39 +29,12 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 
+var hackathonRoutes = require('./routers/hackathon')
+
 app.get('/', function(req, res) {
-  const mentors = [
-    {
-      id: 1,
-      name: "You",
-      imageURL: "https://www.shareicon.net/data/512x512/2015/10/04/112038_glasses_512x512.png"
-    }]
-
-  res.render('index', { organizers: organizers, mentors: mentors })
+  res.render('2018/2018-her-index')
 })
 
-app.get('/participants', function(req, res) {
-  res.render('participants')
-})
-
-app.get('/supporters', function(req, res) {
-  res.render('supporters', { supporters: supporters })
-})
-
-app.get('/travel', function(req, res) {
-  res.render('travel')
-})
-
-app.get('/coc', function(req, res) {
-  res.render('coc')
-})
-
-app.get('/faq', function(req, res) {
-  res.render('faq')
-})
-
-app.get(['/hackathon', '/join'], function(req, res) {
-  res.render('join')
-})
+app.use('/2017/hackathon', hackathonRoutes)
 
 app.listen(port)
