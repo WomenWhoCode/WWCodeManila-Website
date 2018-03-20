@@ -100,17 +100,30 @@ ul {
 }
 
 .footer {
-	background-color: #f8f9fa !important;
-	padding-top: 20px;
-	padding-bottom: 20px;
+  background-color: #f8f9fa !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+.footer-links > li + li::before {
+  content: "|";
+}
+
+/* apply this on small screens like smartphones, etc */
+@media screen and (max-width: 767.98px) {
   .jumbotron-heading {
     font-size: 1.75rem;
   }
 
   .center {
     width: 60%;
+  }
+}
+
+/* apply this on extra small screens like smartphones on portrait, etc */
+@media screen and (max-width: 575.98px) {
+  .footer-links > li + li::before {
+    content: "";
   }
 }
