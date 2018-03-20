@@ -48,7 +48,9 @@
 
           <p>We have been hosting technical study groups ever since we launched last January 2017. But early this year, we saw the importance of soft skills in advancing and improving our members’ careers. Given that realization, this year we will start hosting a series of soft skill topics like <b>How to Negotiate your Salary? How to present yourself? How to start a conversation? and more</b>. For our event this month, we will learn from leading women speakers on how they build their courage to speak in front of an event such as conference, meetups, etc. We also invited hiring managers from different companies to tell us how they promote diversity in their workplace and give insights on what they look for in a candidate.</p>
 
-          <a href="https://www.meetup.com/Women-Who-Code-Manila/events/248092880/" class="btn btn-primary">RSVP here to be part of Her 2.0</a>
+          <div class="row justify-content-center">
+            <a href="https://www.meetup.com/Women-Who-Code-Manila/events/248092880/" class="btn btn-primary">RSVP here to be part of Her 2.0</a>
+          </div>
 
         </div>
       </section>
@@ -68,17 +70,17 @@
           <h1>Agenda</h1>
             <div class="my-3 p-3 bg-white rounded box-shadow">
               <h6 class="border-bottom border-gray pb-2 mb-0">Schedule</h6>
-              
+
                     <% events.forEach((event) => { %>
                       <div class="media pt-3">
                         <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                        <strong class="d-block text-gray-dark"><%= event.time %></strong> 
+                        <strong class="d-block text-gray-dark"><%= event.time %></strong>
                           <%= event.title %>
                           <br>
                           <%= event.speaker %>
                           </p>
                       </div>
-					<% }) %>        
+					<% }) %>
 
         <small class="d-block text-right mt-3">
           <a href="#">Join the event</a>
