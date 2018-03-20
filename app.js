@@ -39,4 +39,10 @@ app.get('/', function(req, res) {
 
 app.use('/2017/hackathon', hackathonRoutes)
 
-app.listen(port)
+app.listen(port, function(error) {
+  if (error) {
+    console.error(error)
+  } else {
+    console.info("==> 🌎  Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port)
+  }
+})
