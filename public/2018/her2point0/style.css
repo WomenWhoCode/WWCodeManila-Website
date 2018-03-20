@@ -21,16 +21,17 @@ a {
 }
 
 .jumbotron {
-    background: url("/2018/her2point0/img/collage-white.jpg") no-repeat top center; 
-    -webkit-background-size: 100% auto;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    background-size: 100% auto;
-    height: 590px;
+  background: url("/2018/her2point0/img/collage-white.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  max-height: 590px;
+  min-height: 450px;
 }
 
 .jumbotron-heading {
-	color: "3d3d3d";
+  color: "3d3d3d";
 }
 
 .btn {
@@ -102,4 +103,14 @@ ul {
 	background-color: #f8f9fa !important;
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .jumbotron-heading {
+    font-size: 1.75rem;
+  }
+
+  .center {
+    width: 60%;
+  }
 }
