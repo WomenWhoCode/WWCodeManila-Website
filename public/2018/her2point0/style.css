@@ -115,15 +115,20 @@ ul {
   .jumbotron-heading {
     font-size: 1.75rem;
   }
-
-  .center {
-    width: 60%;
-  }
 }
 
 /* apply this on extra small screens like smartphones on portrait, etc */
 @media screen and (max-width: 575.98px) {
+  .jumbotron-heading {
+    font-size: 1.25rem;
+  }
+
+  .center {
+    width: 90%;
+  }
+
   .footer-links > li + li::before {
     content: "";
   }
+
 }
