@@ -1,0 +1,64 @@
+a {
+    color: #007a7c;
+}
+
+.jumbotron {
+  background: url("/2018/techsummit/img/ts-jumbotron.png") no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  max-height: 1000px;
+  min-height: 600px;
+  margin-bottom: 0px;
+}
+
+.btn-techsummit {
+  background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+  border-radius: 40px;
+  box-sizing: border-box;
+  color: #00a84f;
+  display: block;
+  font: 1rem 'Oswald', Arial, sans-serif; /*18*/
+  height: 80px;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  padding: 6px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 260px;
+  z-index: 2;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.btn-techsummit:hover {
+  color: #fff;
+}
+
+.btn-techsummit span {
+  align-items: center;
+  background: #e7e8e9;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background .5s ease;
+  width: 100%;
+}
+
+.btn-techsummit:hover span {
+  background: transparent;
+}
+
+.footer {
+  background-color: #f8f9fa !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer-links > li + li::before {
+  content: "|";
+}

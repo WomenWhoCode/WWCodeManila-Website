@@ -22,7 +22,7 @@ const events = require('./data/her2point0/events.json')
 app.set('view engine', 'ejs')
 app.set('trust proxy', app.get('env') != 'development')
 app.use(express.static(__dirname + '/public'))
-//app.use(forceSSL);
+app.use(forceSSL);
 app.use(session({
   secret: process.env.SESSION_SECRET,
   secure: app.get('env') != 'development'
@@ -33,7 +33,16 @@ app.use(bodyParser.urlencoded({
 
 var hackathonRoutes = require('./routers/hackathon')
 
-app.get('/', function(req, res) {
+app.get('/', function(req, res){
+  res.render('2018/2018-tech-summit')
+})
+
+app.get('/call-for-speakers', function(req, res){
+  res.render('2018/2018-tech-summit-cfs')
+})
+
+
+app.get('/2018/Her-2-point-0', function(req, res) {
   res.render('2018/2018-her-index', { events: events })
 })
 
