@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Poppins:300,400');
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -24,31 +24,13 @@ a {
   color: #006163;
 }
 
-.jumbotron {
-  /*background: url("/2018/techsummit/img/ts-jumbotron.png") no-repeat top center #006175;*/
-  /*-webkit-background-size: cover;*/
-  /*-moz-background-size: cover;*/
-  /*-o-background-size: cover;*/
-  /*background-size: cover;*/
-  background-color: #007a7c;
-  max-height: 1000px;
-  min-height: 600px;
-  margin-bottom: 0px;
-  border-radius: 0;
-}
-
 .btn-techsummit {
   border-radius: 40px;
   box-sizing: border-box;
   background-color: #007a7c;
   display: block;
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 1px;
   padding: 6px;
   position: relative;
-  text-decoration: none;
-  z-index: 2;
 }
 
 .btn-techsummit:hover {
@@ -67,9 +49,53 @@ a {
   padding: 3px 15px;
 }
 
-.btn-techsummit:hover span {
-  background: transparent;
+.btn-more {
+  border-radius: 40px;
+  box-sizing: border-box;
+  background-color: #00acaf;
+  display: block;
+  position: relative;
+  color: #ffffff;
+  padding: 9px 23px;
+  font-size: 13px;
+  -webkit-box-shadow: -2px 2px 19px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px 2px 19px -5px rgba(0,0,0,0.75);
+  box-shadow: -2px 2px 19px -5px rgba(0,0,0,0.75);
 }
+
+.jumbotron {
+  /*background: url("/2018/techsummit/img/ts-jumbotron.png") no-repeat top center #006175;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*background-size: cover;*/
+  height: 100%;
+  margin: 0;
+  background-color: #007a7c;
+  max-height: 1000px;
+  min-height: 600px;
+  border-radius: 0;
+}
+
+.jumbotron h1 {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 90px;
+}
+
+.jumbotron h1 strong {
+  font-size: 50px;
+  display: block;
+}
+
+.jumbotron h2 {
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: 0.25px;
+}
+
 
 .footer {
   background-color: #f8f9fa !important;
