@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600|Poppins:300,400');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
 @font-face {
   font-family: 'Bebas Neue Regular';
   src: url("/2018/techsummit/fonts/BebasNeue Regular.otf");
@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -86,16 +86,14 @@ a {
   border-radius: 0;
 }
 
-/*.jumbotron .container {*/
-  /*position: absolute;*/
-  /*padding: 0 50px;*/
-/*}*/
+.jumbotron .container {
+  padding: 90px 40px;
+}
 
 .jumbotron h1 {
   color: #ffffff;
   font-size: 56px;
   font-family: 'Bebas Neue Book', sans-serif;
-  margin-top: 90px;
 }
 
 .jumbotron h1 .highlight {
@@ -122,8 +120,8 @@ a {
 
 .about h3 {
   margin-top: 15px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-family: 'Bebas Neue Bold', sans-serif;
+  font-size: 32px;
   font-weight: 600;
   color: #006175;
 }
@@ -140,6 +138,30 @@ a {
 
 .schedule {
   height: 600px;
+  background-color: #f1f8fb;
+}
+
+.schedule .container {
+  padding: 90px 40px;
+}
+
+.schedule h2 {
+  font-family: 'Bebas Neue Bold', sans-serif;
+  font-size: 42px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f1f8fb;
+}
+
+.schedule table {
+  margin-top: 70px;
+  background-color: white;
+  text-align: left;
+}
+
+.schedule table td, .schedule table th {
+  padding-left: 30px;
 }
 
 .footer {
