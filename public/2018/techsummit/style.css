@@ -86,7 +86,7 @@ a {
   border-radius: 0;
 }
 
-.jumbotron .container {
+section .container {
   padding: 90px 40px;
 }
 
@@ -112,6 +112,10 @@ a {
 
 .about {
   padding: 80px 0;
+}
+
+.about .container {
+  padding: 0;
 }
 
 .about img {
@@ -141,11 +145,7 @@ a {
   background-color: #f1f8fb;
 }
 
-.schedule .container {
-  padding: 90px 40px;
-}
-
-.schedule h2 {
+.schedule h2, .speakers h2 {
   font-family: 'Bebas Neue Bold', sans-serif;
   font-size: 42px;
 }
@@ -158,10 +158,22 @@ a {
   margin-top: 70px;
   background-color: white;
   text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
 }
 
 .schedule table td, .schedule table th {
   padding-left: 30px;
+}
+
+.schedule table td {
+  font-size: 13px;
+  color: #999999;
+}
+
+.schedule table td.session-name {
+  font-weight: 600;
 }
 
 .footer {
