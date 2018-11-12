@@ -20,6 +20,11 @@ a {
   color: #007a7c;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
 .navbar {
   padding: 0px 60px;
 }
@@ -184,6 +189,7 @@ section .container {
   max-width: 300px;
   max-height: 300px;
   margin-bottom: 15px;
+  display: block;
 }
 
 .speakers h2 {
@@ -203,6 +209,10 @@ section .container {
 .speakers .speaker-info p {
   font-size: 13px;
   color: #999999;
+}
+
+.speakers .column {
+  margin: 15px;
 }
 
 .footer {
