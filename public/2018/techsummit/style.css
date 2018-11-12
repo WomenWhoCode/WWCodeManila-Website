@@ -142,8 +142,8 @@ section .container {
 }
 
 #particles-js {
-  background-image: linear-gradient(to top, #007a7c 0%, #007a7c 50%, #00a950 100%);
-  height: 500px;
+  background-color: #bdecb6;
+  height: 150px;
 }
 
 .schedule {
@@ -173,7 +173,7 @@ section h2 {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  width: 800px;
+  max-width: 800px;
 }
 
 .schedule table td, .schedule table th {
@@ -275,13 +275,19 @@ section h2 {
 }
 
 .footer {
-  color: #ffffff;
+  color: #999999;
   padding: 40px;
   text-align: center;
 }
 
+.footer .container {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 .footer-links li a {
-  color: #ffffff;
+  color: #000000;
 }
 
 .particles-js-canvas-el {
