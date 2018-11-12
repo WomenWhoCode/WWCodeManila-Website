@@ -150,7 +150,7 @@ section .container {
   background-color: #f1f8fb;
 }
 
-.schedule h2, .speakers h2 {
+section h2 {
   font-family: 'Bebas Neue Bold', sans-serif;
   font-size: 42px;
 }
@@ -182,7 +182,7 @@ section .container {
 }
 
 .speakers .speaker-container {
-  padding: 90px 70px;
+  padding: 90px 70px 40px 70px;
 }
 
 .speakers img {
@@ -213,6 +213,14 @@ section .container {
 
 .speakers .column {
   margin: 15px;
+}
+
+.sponsors {
+  background-color: #c3d8df;
+}
+
+.sponsors img {
+  max-width: 150px;
 }
 
 .footer {
