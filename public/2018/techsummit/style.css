@@ -176,6 +176,35 @@ section .container {
   font-weight: 600;
 }
 
+.speakers .speaker-container {
+  padding: 90px 70px;
+}
+
+.speakers img {
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 15px;
+}
+
+.speakers h2 {
+  margin-bottom: 50px;
+}
+
+.speakers .speaker-info {
+  margin-bottom: 50px;
+}
+
+.speakers .speaker-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.speakers .speaker-info p {
+  font-size: 13px;
+  color: #999999;
+}
+
 .footer {
   background-color: #f8f9fa !important;
   padding-top: 20px;
