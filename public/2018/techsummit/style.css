@@ -245,6 +245,7 @@ section h2 {
 
 .speakers .column {
   margin: 15px;
+  max-width: 300px;
 }
 
 .sponsors {
