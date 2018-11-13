@@ -115,8 +115,13 @@ section .container {
   letter-spacing: 0.25px;
 }
 
+.about-us {
+  background-color: #ffffff;
+}
+
 .about {
   padding: 80px 0;
+  background-color: #efefef;
 }
 
 .about .container {
@@ -147,7 +152,7 @@ section .container {
 }
 
 .schedule {
-  background-color: #f1f8fb;
+  background-color: #ffffff;
   min-height: 800px;
   height: fit-content;
 }
@@ -182,6 +187,7 @@ section h2 {
 }
 
 .speakers .speaker-container {
+  background-color: #f1f8fb;
   padding: 90px 70px 40px 70px;
 }
 
