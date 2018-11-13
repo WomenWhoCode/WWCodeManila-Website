@@ -186,8 +186,9 @@ section h2 {
 }
 
 .speakers img {
-  max-width: 300px;
-  max-height: 300px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
   margin-bottom: 15px;
   display: block;
 }
