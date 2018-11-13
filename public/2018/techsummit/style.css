@@ -147,24 +147,14 @@ section .container {
 }
 
 .schedule {
-  height: 600px;
   background-color: #f1f8fb;
+  min-height: 800px;
+  height: fit-content;
 }
 
 section h2 {
   font-family: 'Bebas Neue Bold', sans-serif;
   font-size: 42px;
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: #f1f8fb;
-}
-
-.schedule .container {
-  position: absolute;
-  margin: 0 auto;
-  left: -5%;
-  right: -5%;
 }
 
 .schedule table {
@@ -173,11 +163,6 @@ section h2 {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px;
-}
-
-.schedule table td, .schedule table th {
-  padding-left: 30px;
 }
 
 .schedule table td {
@@ -187,6 +172,13 @@ section h2 {
 
 .schedule table td.session-name {
   font-weight: 600;
+  font-size: 15px;
+}
+
+.schedule table td.session-name span {
+  font-size: 13px;
+  font-weight: 400;
+  display: block;
 }
 
 .speakers .speaker-container {
