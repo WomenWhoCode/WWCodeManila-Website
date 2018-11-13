@@ -172,7 +172,15 @@ section h2 {
 
 .schedule table td {
   font-size: 13px;
-  color: #999999;
+  color: #3d3d3d;
+}
+
+.table-border td {
+  border: 0px;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #ddedec;
 }
 
 .schedule table td.session-name {
