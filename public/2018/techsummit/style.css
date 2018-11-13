@@ -1,62 +1,297 @@
-a {
-    color: #007a7c;
+@import url('https://fonts.googleapis.com/css?family=Lato:400,600');
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: url("/2018/techsummit/fonts/BebasNeue Regular.otf");
+}
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: url("/2018/techsummit/fonts/BebasNeue Bold.otf");
+}
+@font-face {
+  font-family: 'Bebas Neue Book';
+  src: url("/2018/techsummit/fonts/BebasNeue Book.otf");
 }
 
-.jumbotron {
-  background: url("/2018/techsummit/img/ts-jumbotron.png") no-repeat top center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  max-height: 1000px;
-  min-height: 600px;
-  margin-bottom: 0px;
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: #007a7c;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  padding: 0px 60px;
+}
+
+.navbar .btn-techsummit {
+  margin-left: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #007a7c;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #006163;
 }
 
 .btn-techsummit {
-  background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
   border-radius: 40px;
   box-sizing: border-box;
-  color: #00a84f;
+  background-color: #007a7c;
   display: block;
-  font: 1rem 'Oswald', Arial, sans-serif; /*18*/
-  height: 80px;
-  letter-spacing: 1px;
-  margin: 0 auto;
   padding: 6px;
   position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 260px;
-  z-index: 2;
-  margin-left: 6px;
-  margin-right: 6px;
 }
 
 .btn-techsummit:hover {
-  color: #fff;
+  background-color: #006163;
 }
 
 .btn-techsummit span {
   align-items: center;
-  background: #e7e8e9;
   border-radius: 40px;
   display: flex;
   justify-content: center;
   height: 100%;
   transition: background .5s ease;
   width: 100%;
+  color: #ffffff;
+  padding: 3px 15px;
 }
 
-.btn-techsummit:hover span {
-  background: transparent;
+.btn-more {
+  border-radius: 40px;
+  box-sizing: border-box;
+  background-color: #00acaf;
+  display: block;
+  position: relative;
+  color: #ffffff;
+  padding: 9px 23px;
+  font-size: 13px;
+  -webkit-box-shadow: -2px 2px 19px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px 2px 19px -5px rgba(0,0,0,0.75);
+  box-shadow: -2px 2px 19px -5px rgba(0,0,0,0.75);
+}
+
+.jumbotron {
+  background: url("/2018/techsummit/img/summit-jumbotron-bg.png") no-repeat center center #006175;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  height: 600px;
+  border-radius: 0;
+}
+
+section .container {
+  padding: 90px 40px;
+}
+
+.jumbotron h1 {
+  color: #ffffff;
+  font-size: 56px;
+  font-family: 'Bebas Neue Book', sans-serif;
+}
+
+.jumbotron h1 .highlight {
+  font-size: 90px;
+  font-family: 'Bebas Neue Bold', sans-serif;
+  display: block;
+}
+
+.jumbotron h2 {
+  font-family: 'Bebas Neue Book', sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: 0.25px;
+}
+
+.about-us {
+  background-color: #ffffff;
+}
+
+.about {
+  padding: 80px 0;
+  background-color: #efefef;
+}
+
+.about .container {
+  padding: 0;
+}
+
+.about img {
+  max-width: 80px;
+}
+
+.about h3 {
+  margin-top: 15px;
+  font-family: 'Bebas Neue Bold', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #006175;
+}
+
+.about p {
+  font-size: 13px;
+  color: #808080;
+  letter-spacing: 0.25px;
+}
+
+#particles-js {
+  background-color: #bdecb6;
+  height: 150px;
+}
+
+.schedule {
+  background-color: #ffffff;
+  min-height: 800px;
+  height: fit-content;
+}
+
+section h2 {
+  font-family: 'Bebas Neue Bold', sans-serif;
+  font-size: 42px;
+}
+
+.schedule table {
+  margin-top: 70px;
+  background-color: white;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.schedule table td {
+  font-size: 13px;
+  color: #999999;
+}
+
+.schedule table td.session-name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.schedule table td.session-name span {
+  font-size: 13px;
+  font-weight: 400;
+  display: block;
+}
+
+.speakers .speaker-container {
+  background-color: #f1f8fb;
+  padding: 90px 70px 40px 70px;
+}
+
+.speakers img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.speakers h2 {
+  margin-bottom: 50px;
+  color: #007a7c;
+}
+
+.speakers .speaker-info {
+  margin-bottom: 50px;
+}
+
+.speakers .speaker-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.speakers .speaker-info p {
+  font-size: 13px;
+  color: #999999;
+}
+
+.speakers .image {
+  position: relative;
+}
+
+.speakers .image .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #007a7c;
+}
+
+.speakers .image:hover .overlay {
+  opacity: 0.9;
+}
+
+.speakers .image .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.speakers .column {
+  margin: 15px;
+  max-width: 300px;
+}
+
+.sponsors {
+  background-color: #c3d8df;
+}
+
+.sponsors img {
+  max-height: 60px;
+}
+
+.map {
+  margin: 0;
+  padding: 0;
+  height: 300px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .footer {
-  background-color: #f8f9fa !important;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  color: #999999;
+  padding: 40px;
   text-align: center;
+}
+
+.footer .container {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.footer-links li a {
+  color: #000000;
+}
+
+.particles-js-canvas-el {
+  height: calc(100% - 80px) !important;
 }
 
 .footer-links > li + li::before {
