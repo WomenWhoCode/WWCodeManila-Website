@@ -127,7 +127,7 @@ section .container {
 }
 
 .about .container {
-  padding: 0;
+  overflow: hidden;
 }
 
 .about img {
@@ -322,6 +322,8 @@ section h2 {
 
   .schedule .container {
     padding: 50px 0;
+    overflow: auto;
+    overflow-y: hidden;
   }
 
   .speakers .speaker-info {
