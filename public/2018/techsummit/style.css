@@ -14,6 +14,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  font-size: 15px;
 }
 
 a {
@@ -89,6 +90,7 @@ a {
   margin: 0;
   height: 600px;
   border-radius: 0;
+  padding: 0;
 }
 
 section .container {
@@ -121,7 +123,7 @@ section .container {
 
 .about {
   padding: 80px 0;
-  background-color: #efefef;
+  background-color: #f6f6f6;
 }
 
 .about .container {
@@ -141,14 +143,9 @@ section .container {
 }
 
 .about p {
-  font-size: 13px;
   color: #808080;
   letter-spacing: 0.25px;
-}
-
-#particles-js {
-  background-color: #bdecb6;
-  height: 150px;
+  margin-bottom: 50px;
 }
 
 .schedule {
@@ -194,6 +191,10 @@ section h2 {
   display: block;
 }
 
+.schedule .container {
+  padding: 90px 0;
+}
+
 .speakers .speaker-container {
   background-color: #f1f8fb;
   padding: 90px 70px 40px 70px;
@@ -223,7 +224,6 @@ section h2 {
 }
 
 .speakers .speaker-info p {
-  font-size: 13px;
   color: #999999;
 }
 
@@ -283,19 +283,14 @@ section h2 {
 }
 
 .footer {
-  color: #999999;
+  color: #ffffff;
   padding: 40px;
   text-align: center;
-}
-
-.footer .container {
-  position: absolute;
-  left: 0;
-  right: 0;
+  background-color: #007a7c;
 }
 
 .footer-links li a {
-  color: #000000;
+  color: #ffffff;
 }
 
 .particles-js-canvas-el {
@@ -304,4 +299,41 @@ section h2 {
 
 .footer-links > li + li::before {
   content: "|";
+}
+
+@media (max-width: 576px) {
+  section .container {
+    padding: 50px 40px;
+  }
+
+  .jumbotron h1 {
+    font-size: 36px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+
+  .jumbotron h1 .highlight {
+    font-size: 50px;
+  }
+
+  .jumbotron h2 {
+    font-size: 24px;
+  }
+
+  .schedule .container {
+    padding: 50px 0;
+  }
+
+  .speakers .speaker-info {
+    margin-bottom: 10px;
+  }
+
+  .speakers .column {
+    max-width: 150px;
+  }
+
+  .speakers img {
+    width: 150px;
+    height: 150px;
+  }
 }
