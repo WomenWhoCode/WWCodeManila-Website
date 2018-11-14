@@ -342,10 +342,6 @@ section h2 {
     display: block;
   }
 
-  .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    /*background-color: #ffffff;*/
-  }
-
   .schedule table td {
     border: none;
   }
