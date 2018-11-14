@@ -301,9 +301,18 @@ section h2 {
   content: "|";
 }
 
+.navbar-collapse {
+  display: flex !important;
+  flex-basis: auto !important;
+}
+
 @media (max-width: 576px) {
   section .container {
     padding: 50px 40px;
+  }
+
+  .navbar {
+    padding: 0 30px;
   }
 
   .jumbotron h1 {
