@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,600');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 @font-face {
   font-family: 'Bebas Neue Regular';
   src: url("/2018/techsummit/fonts/BebasNeue Regular.otf");
@@ -138,7 +138,6 @@ section .container {
   margin-top: 15px;
   font-family: 'Bebas Neue Bold', sans-serif;
   font-size: 32px;
-  font-weight: 600;
   color: #006175;
 }
 
@@ -169,7 +168,7 @@ section h2 {
 
 .schedule table td {
   font-size: 13px;
-  color: #3d3d3d;
+  color: #808080;
 }
 
 .table-border td {
@@ -181,7 +180,7 @@ section h2 {
 }
 
 .schedule table td.session-name {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 15px;
 }
 
@@ -219,7 +218,7 @@ section h2 {
 
 .speakers .speaker-info h3 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 5px;
 }
 
@@ -335,6 +334,27 @@ section h2 {
     overflow-y: hidden;
   }
 
+  .schedule table thead {
+    display: none;
+  }
+
+  .schedule table td {
+    display: block;
+  }
+
+  .schedule table td {
+    border: none;
+  }
+
+  .schedule table td:first-child {
+    border: none;
+    padding-bottom: 0;
+  }
+
+  .schedule table td:nth-child(2) {
+    padding-top: 0;
+  }
+
   .speakers .speaker-info {
     margin-bottom: 10px;
   }
@@ -350,5 +370,9 @@ section h2 {
 
   .sponsors img {
     max-height: 50px;
+  }
+
+  .mobile-hidden {
+    display: none !important;
   }
 }
