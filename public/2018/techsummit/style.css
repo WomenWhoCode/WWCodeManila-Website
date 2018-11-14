@@ -347,4 +347,8 @@ section h2 {
     width: 150px;
     height: 150px;
   }
+
+  .sponsors img {
+    max-height: 50px;
+  }
 }
