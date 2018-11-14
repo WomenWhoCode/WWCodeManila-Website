@@ -306,6 +306,10 @@ section h2 {
     padding: 50px 40px;
   }
 
+  .navbar {
+    padding: 0 30px;
+  }
+
   .jumbotron h1 {
     font-size: 36px;
     margin-top: 80px;
