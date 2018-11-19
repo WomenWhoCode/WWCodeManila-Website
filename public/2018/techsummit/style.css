@@ -82,7 +82,7 @@ a {
 }
 
 .jumbotron {
-  background: url("/2018/techsummit/img/summit-jumbotron-bg.png") no-repeat center center #006175;
+  background: url("/2018/techsummit/img/jumbotron-bg-img.png") no-repeat center center #006175;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -91,6 +91,7 @@ a {
   height: 600px;
   border-radius: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 section .container {
@@ -101,6 +102,7 @@ section .container {
   color: #ffffff;
   font-size: 56px;
   font-family: 'Bebas Neue Book', sans-serif;
+  margin-bottom: 70px;
 }
 
 .jumbotron h1 .highlight {
@@ -117,20 +119,31 @@ section .container {
   letter-spacing: 0.25px;
 }
 
+.jumbotron img {
+  height: 60px;
+  margin-bottom: 30px;
+}
+
 .about-us {
+  background: url("/2018/techsummit/img/women-who-code.png") no-repeat center center #ffffff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-color: #ffffff;
 }
 
 .about {
-  padding: 80px 0;
   background-color: #f6f6f6;
 }
 
 .about .container {
   overflow: hidden;
+  padding: 10px 40px;
 }
 
 .about img {
+  margin-top: 50px;
   max-width: 80px;
 }
 
@@ -314,9 +327,14 @@ section h2 {
     padding: 0 30px;
   }
 
+  .jumbotron {
+    height: 480px;
+    background-position: initial;
+  }
+
   .jumbotron h1 {
     font-size: 36px;
-    margin-top: 80px;
+    margin-top: 60px;
     margin-bottom: 60px;
   }
 
@@ -353,6 +371,10 @@ section h2 {
 
   .schedule table td:nth-child(2) {
     padding-top: 0;
+  }
+
+  .speakers .speaker-container {
+    padding: 90px 10px 40px 10px;
   }
 
   .speakers .speaker-info {
