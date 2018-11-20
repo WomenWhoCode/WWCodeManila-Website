@@ -21,6 +21,10 @@ a {
   color: #007a7c;
 }
 
+a:hover {
+  color: #007a7c;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -30,8 +34,8 @@ a {
   padding: 0px 60px;
 }
 
-.navbar .btn-techsummit {
-  margin-left: 20px;
+.navbar .nav-link {
+  margin: 0 20px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -81,8 +85,10 @@ a {
   box-shadow: -2px 2px 19px -5px rgba(0,0,0,0.75);
 }
 
+/* Home Page */
+
 .jumbotron {
-  background: url("/2018/techsummit/img/summit-jumbotron-bg.png") no-repeat center center #006175;
+  background: url("/2018/techsummit/img/jumbotron-bg.png") no-repeat center center #006175;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -91,6 +97,7 @@ a {
   height: 600px;
   border-radius: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 section .container {
@@ -101,6 +108,7 @@ section .container {
   color: #ffffff;
   font-size: 56px;
   font-family: 'Bebas Neue Book', sans-serif;
+  margin-bottom: 70px;
 }
 
 .jumbotron h1 .highlight {
@@ -117,20 +125,31 @@ section .container {
   letter-spacing: 0.25px;
 }
 
+.jumbotron img {
+  height: 60px;
+  margin-bottom: 30px;
+}
+
 .about-us {
+  background: url("/2018/techsummit/img/women-who-code.png") no-repeat center center #ffffff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-color: #ffffff;
 }
 
 .about {
-  padding: 80px 0;
   background-color: #f6f6f6;
 }
 
 .about .container {
   overflow: hidden;
+  padding: 10px 40px;
 }
 
 .about img {
+  margin-top: 50px;
   max-width: 80px;
 }
 
@@ -168,7 +187,7 @@ section h2 {
 
 .schedule table td {
   font-size: 13px;
-  color: #808080;
+  color: #253539;
 }
 
 .table-border td {
@@ -262,6 +281,10 @@ section h2 {
   max-width: 300px;
 }
 
+.speakers .column a:hover {
+  text-decoration: none;
+}
+
 .sponsors {
   background-color: #c3d8df;
 }
@@ -300,11 +323,6 @@ section h2 {
   content: "|";
 }
 
-.navbar-collapse {
-  display: flex !important;
-  flex-basis: auto !important;
-}
-
 @media (max-width: 576px) {
   section .container {
     padding: 50px 40px;
@@ -314,9 +332,14 @@ section h2 {
     padding: 0 30px;
   }
 
+  .jumbotron {
+    height: 480px;
+    background-position: initial;
+  }
+
   .jumbotron h1 {
     font-size: 36px;
-    margin-top: 80px;
+    margin-top: 60px;
     margin-bottom: 60px;
   }
 
@@ -326,6 +349,16 @@ section h2 {
 
   .jumbotron h2 {
     font-size: 24px;
+  }
+
+  .speakers .image .overlay {
+    opacity: 1;
+    background-color: rgba(0, 122, 124, 0.5);
+  }
+
+  .speakers .image .text {
+    font-size: 14px;
+    width: 90%;
   }
 
   .schedule .container {
@@ -355,6 +388,10 @@ section h2 {
     padding-top: 0;
   }
 
+  .speakers .speaker-container {
+    padding: 90px 10px 40px 10px;
+  }
+
   .speakers .speaker-info {
     margin-bottom: 10px;
   }
@@ -374,5 +411,64 @@ section h2 {
 
   .mobile-hidden {
     display: none !important;
+  }
+}
+
+/* Topics Page */
+
+.topic-category h1 {
+  color: white;
+  font-family: 'Bebas Neue Bold', sans-serif;
+  font-size: 50px;
+  margin: 0;
+  padding: 10px 200px 0;
+}
+
+.topic-category .h1-container {
+  background-image: linear-gradient(to right, #fbb03b, #ed2876);
+  padding: 10px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  display: inline-block;
+}
+
+.topic-category {
+  background: url("/2018/techsummit/img/women-who-code.png") no-repeat center center #ffffff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #cfdcdd;
+}
+
+.topic-container {
+  margin-bottom: 60px;
+}
+
+.topic-container h2 {
+  margin-bottom: 0;
+}
+
+.topic-container h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+*[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -130px;
+  height: 130px;
+  visibility: hidden;
+}
+
+@media (max-width: 576px) {
+  .topic-category .h1-container {
+    min-width: 300px;
+  }
+
+  .topic-category h1 {
+    padding: 10px 30px 0;
+    font-size: 40px;
   }
 }

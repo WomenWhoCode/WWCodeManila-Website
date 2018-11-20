@@ -37,6 +37,10 @@ app.get('/', function(req, res){
   res.render('2018/2018-tech-summit')
 })
 
+app.get('/topics', function(req, res){
+  res.render('2018/2018-tech-summit-topics')
+})
+
 app.get('/call-for-speakers', function(req, res){
   res.render('2018/2018-tech-summit-cfs')
 })
