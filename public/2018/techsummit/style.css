@@ -461,3 +461,14 @@ section h2 {
   height: 130px;
   visibility: hidden;
 }
+
+@media (max-width: 576px) {
+  .topic-category .h1-container {
+    min-width: 300px;
+  }
+
+  .topic-category h1 {
+    padding: 10px 30px 0;
+    font-size: 40px;
+  }
+}
