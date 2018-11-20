@@ -351,6 +351,16 @@ section h2 {
     font-size: 24px;
   }
 
+  .speakers .image .overlay {
+    opacity: 1;
+    background-color: rgba(0, 122, 124, 0.5);
+  }
+
+  .speakers .image .text {
+    font-size: 14px;
+    width: 90%;
+  }
+
   .schedule .container {
     padding: 50px 0;
     overflow: auto;
