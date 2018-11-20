@@ -30,8 +30,8 @@ a {
   padding: 0px 60px;
 }
 
-.navbar .btn-techsummit {
-  margin-left: 20px;
+.navbar .nav-link {
+  margin: 0 20px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -313,11 +313,6 @@ section h2 {
 
 .footer-links > li + li::before {
   content: "|";
-}
-
-.navbar-collapse {
-  display: flex !important;
-  flex-basis: auto !important;
 }
 
 @media (max-width: 576px) {
