@@ -81,8 +81,10 @@ a {
   box-shadow: -2px 2px 19px -5px rgba(0,0,0,0.75);
 }
 
+/* Home Page */
+
 .jumbotron {
-  background: url("/2018/techsummit/img/jumbotron-bg-img.png") no-repeat center center #006175;
+  background: url("/2018/techsummit/img/jumbotron-bg.png") no-repeat center center #006175;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -181,7 +183,7 @@ section h2 {
 
 .schedule table td {
   font-size: 13px;
-  color: #808080;
+  color: #253539;
 }
 
 .table-border td {
@@ -397,4 +399,44 @@ section h2 {
   .mobile-hidden {
     display: none !important;
   }
+}
+
+/* Topics Page */
+
+.topic-category h1 {
+  color: white;
+  font-family: 'Bebas Neue Bold', sans-serif;
+  font-size: 50px;
+  margin: 0;
+  padding: 10px 200px 0;
+}
+
+.topic-category .h1-container {
+  background-image: linear-gradient(to right, #fbb03b, #ed2876);
+  padding: 10px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  display: inline-block;
+}
+
+.topic-category {
+  background: url("/2018/techsummit/img/women-who-code.png") no-repeat center center #ffffff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #cfdcdd;
+}
+
+.topic-container {
+  margin-bottom: 60px;
+}
+
+.topic-container h2 {
+  margin-bottom: 0;
+}
+
+.topic-container h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
 }
