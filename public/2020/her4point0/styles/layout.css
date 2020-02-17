@@ -11,6 +11,7 @@
   display: flex;
   justify-content: center;
   list-style-type: none;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -23,5 +24,10 @@
 
 .footer-links > a:not(:last-child):after {
   content: "•";
-  margin: 1.5rem;
+  margin: 0.5rem;
+}
+
+.footer-links > a:not(:first-child):before {
+  /* content: " "; */
+  margin: 0.5rem;
 }
