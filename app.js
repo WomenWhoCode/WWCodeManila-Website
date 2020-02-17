@@ -41,12 +41,20 @@ app.get("/", function(req, res) {
   res.render("2020/2020-her4point0");
 });
 
-app.get("/topics", function(req, res) {
+app.get("/2020/her-4-point-0", function(req, res) {
+  res.render("2020/2020-her4point0");
+});
+
+app.get("/2018/tech-summit/topics", function(req, res) {
   res.render("2018/2018-tech-summit-topics");
 });
 
-app.get("/call-for-speakers", function(req, res) {
+app.get("/2018/tech-summit/call-for-speakers", function(req, res) {
   res.render("2018/2018-tech-summit-cfs");
+});
+
+app.get("/2018/tech-summit", function(req, res) {
+  res.render("2018/2018-tech-summit");
 });
 
 app.get("/2018/Her-2-point-0", function(req, res) {
