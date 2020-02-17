@@ -1,0 +1,33 @@
+.navbar-item img {
+  min-height: 3.75rem;
+}
+
+.navbar-burger {
+  height: 5.25rem;
+  width: 5.25rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.footer-links > a {
+  display: block;
+  text-decoration: none;
+}
+
+.footer-links > a:not(:last-child):after {
+  content: "•";
+  margin: 0.5rem;
+}
+
+.footer-links > a:not(:first-child):before {
+  /* content: " "; */
+  margin: 0.5rem;
+}
