@@ -27,3 +27,12 @@ h4 {
   font-family: "Lato", sans-serif;
   font-size: 20px;
 }
+
+strong {
+  font-weight: bold;
+  color: #024f4f;
+}
+
+.columns.is-centered {
+  margin-top: 0px;
+}
