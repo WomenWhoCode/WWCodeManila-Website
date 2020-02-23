@@ -1,0 +1,13 @@
+<div class="hero has-background-primary">
+  <div class="hero-body has-text-centered">
+    <h1 class="title has-text-white">Supported by</h1>
+    <% supporters.forEach((supporter) => { %>
+    <a href="<%= supporter.url %>" target="_blank" rel="noopener noreferrer"
+      ><img
+        src="<%= supporter.imageURL %> "
+        height="50px"
+        alt="<%=  supporter.name %>"
+    /></a>
+    <% }) %>
+  </div>
+</div>

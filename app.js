@@ -18,6 +18,7 @@ const port = process.env.PORT || 8080;
 const app = express();
 
 const events = require("./data/her2point0/events.json");
+const supporters = require("./data/her4point0/supporters.json");
 
 app.set("view engine", "ejs");
 app.set("trust proxy", app.get("env") != "development");
@@ -38,11 +39,11 @@ app.use(
 var hackathonRoutes = require("./routers/hackathon");
 
 app.get("/", function(req, res) {
-  res.render("2020/2020-her4point0");
+  res.render("2020/2020-her4point0", { supporters: supporters });
 });
 
 app.get("/2020/her-4-point-0", function(req, res) {
-  res.render("2020/2020-her4point0");
+  res.render("2020/2020-her4point0", { supporters: supporters });
 });
 
 app.get("/2018/tech-summit/topics", function(req, res) {
