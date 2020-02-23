@@ -10,26 +10,3 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
 }
-
-/* .jumbotron {
-  background: url("/2020/her4point0/img/jumbotron-bg-img.png") no-repeat center
-    center #006175;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin: 0;
-  height: 600px;
-  border-radius: 0;
-  padding: 0;
-  overflow: hidden;
-} */
-
-.hero.banner {
-  background: url("/2020/her4point0/img/jumbotron-bg-img.png") no-repeat center
-    center #006175;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}

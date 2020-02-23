@@ -8,7 +8,8 @@ a {
   color: var(--dark-teal);
 }
 
-.is-primary {
+.is-primary,
+.has-background-primary {
   background-color: var(--light-teal) !important;
   color: var(--white);
 }
