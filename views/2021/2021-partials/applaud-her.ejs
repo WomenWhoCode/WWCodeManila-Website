@@ -1,0 +1,27 @@
+<section class="hero" id="applaud-her">
+  <div class="hero-body container">
+    <h1 class="title has-text-centered">Applaud Her</h1>
+
+    <div class="events">
+      <% data.applaudHer.map((applaud) => { %>
+      <div class="card event">
+        <div class="card-content">
+          <figure class="image has-text-centered">
+            <img
+              id="applaud-image"
+              src="<%= applaud.imageURL %>"
+              alt="<%= applaud.name %>"
+            />
+          </figure>
+          <div class="content">
+            <h3 class="title is-size-3 has-text-centered">
+              <%= applaud.name %>
+            </h3>
+            <p class="is-size-5 has-text-left"><%= applaud.description %></p>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

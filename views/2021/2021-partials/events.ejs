@@ -1,0 +1,50 @@
+<section class="hero is-primary" id="mini-events">
+  <div class="hero-body container">
+    <h1 class="title has-text-centered">Events</h1>
+
+    <div class="events">
+      <% data.events.map((event) => { %>
+      <a
+        href="<%= event.meetupURL %>"
+        rel="noreferrer noopener"
+        target="_blank"
+      >
+        <div class="card event">
+          <div class="card-content">
+            <div class="content">
+              <h3 class="has-text-centered">
+                <span class="title is-size-3 has-text-primary"
+                  ><%= event.title %></span
+                >
+                <br />
+                <time class="has-text-dark is-size-6"><%= event.date %></time>
+                <span class="tag is-danger"><%= event.type %></span>
+              </h3>
+
+              <p class="is-size-5"><%= event.description %></p>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <figure class="image">
+                  <img
+                    id="profile"
+                    class="is-rounded"
+                    src="<%= event.speakerImageURL %>"
+                    alt="<%= event.speaker %>"
+                  />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4 has-text-dark"><%= event.speaker %></p>
+                <p class="subtitle is-6 has-text-dark">
+                  <%= event.profession %> <%= event.company %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <% }) %>
+    </div>
+  </div>
+</section>
