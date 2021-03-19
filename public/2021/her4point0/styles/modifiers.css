@@ -1,0 +1,76 @@
+:root {
+    --white: #ffffff;
+    --light-teal: #007a7c;
+    --dark-teal: #024f4f;
+  }
+  
+  a {
+    color: var(--dark-teal);
+  }
+  
+  .is-primary {
+    background-color: var(--light-teal) !important;
+    color: var(--white);
+  }
+  
+  .is-primary:hover {
+    background-color: var(--dark-teal) !important;
+  }
+
+  .has-text-primary {
+    color: var(--light-teal) !important;
+  }
+  
+  .banner-title {
+    font-size: 8rem;
+    color: var(--white);
+    margin-top: 1.5rem;
+  }
+  
+  .banner-subtitle {
+    font-size: 3rem;
+    color: var(--white);
+    margin-top: 1.5rem;
+    margin-bottom: 0rem !important;
+  }
+  
+  .is-size-1, .title {
+    font-size: 3rem;
+  }
+ 
+  .is-size-2 {
+    font-size: 2.5rem;
+  }
+
+  .is-size-3, .subtitle {
+    font-size: 2rem;
+  }
+
+  .is-size-4 {
+    font-size: 1.75rem;
+  }
+
+  .is-size-5 {
+    font-size: 1.5rem;
+  }
+
+  .is-size-6 {
+    font-size: 1rem;
+  }
+
+  .is-size-7 {
+    font-size: 0.75rem;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .card {
+    margin: 0.5rem;
+    border-radius: 12px;
+  }
+
+  .tag.is-danger {
+    background-color: #f4827c !important;
+  }
