@@ -1,0 +1,104 @@
+<% include 2018-partials/her2point0/head %>
+
+    <header>
+      <div class="collapse bg-wwcode" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">Her 2.0 | Capable. Confident. Courageous.</h4>
+              <p class="text-muted">This event aims to inspire and empower women in the tech industry. Our theme this year is about embracing one's capabilities, building one's courage and confidence in public speaking. We have invited leading women speakers and hiring managers to answer your questions regarding Public speaking and job interviews.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Connect with us</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://twitter.com/wwcodemanila" class="text-white">Follow on Twitter</a></li>
+                <li><a href="https://facebook.com/wwcodemanila" class="text-white">Like on Facebook</a></li>
+                <li><a href="mailto:manila@womenwhocode.com" class="text-white">Email us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-wwcode box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>Her 2.0</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+        	<img class="center" src="/2018/her2point0/img/her-logo.png"> 
+        	<h2 class="jumbotron-heading">March 24, 2018 | Accenture, Uptown Mall, BGC</h2>
+            <a href="https://www.meetup.com/Women-Who-Code-Manila/events/248092880/" class="btn btn-primary">RSVP here to be part of Her 2.0</a>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <h1>What is Her 2.0?</h1>
+          <p>This year's theme is <b>Capable. Confident. Courageous</b>. This event aims to inspire and empower women in the tech industry. It's about embracing one's capabilities, building one's courage and confidence in public speaking.</p>
+
+          <p>We have been hosting technical study groups ever since we launched last January 2017. But early this year, we saw the importance of soft skills in advancing and improving our members’ careers. Given that realization, this year we will start hosting a series of soft skill topics like <b>How to Negotiate your Salary? How to present yourself? How to start a conversation? and more</b>. For our event this month, we will learn from leading women speakers on how they build their courage to speak in front of an event such as conference, meetups, etc. We also invited hiring managers from different companies to tell us how they promote diversity in their workplace and give insights on what they look for in a candidate.</p>
+
+          <div class="row justify-content-center">
+            <a href="https://www.meetup.com/Women-Who-Code-Manila/events/248092880/" class="btn btn-primary">RSVP here to be part of Her 2.0</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!--
+
+      <section class="speakers">
+        <div class="container">
+          <h1>Speakers</h1>
+        </div>
+      </section>
+
+      -->
+
+      <section class="agenda">
+        <div class="container">
+          <h1>Agenda</h1>
+            <div class="my-3 p-3 bg-white rounded box-shadow">
+              <h6 class="border-bottom border-gray pb-2 mb-0">Schedule</h6>
+
+                    <% events.forEach((event) => { %>
+                      <div class="media pt-3">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                        <strong class="d-block text-gray-dark"><%= event.time %></strong>
+                          <%= event.title %>
+                          <br>
+                          <%= event.speaker %>
+                          </p>
+                      </div>
+					<% }) %>
+
+        <small class="d-block text-right mt-3">
+          <a href="#">Join the event</a>
+        </small>
+      </div>
+        </div>
+      </section>
+
+      <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.754230913296!2d121.05191024989888!3d14.556042182020732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8f50262e439%3A0x61bcab49fc469234!2sAccenture+Uptown+Mall+bonifacio+tower+2+office!5e0!3m2!1sen!2sph!4v1521394915313" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </section>
+
+      <section class="supporters">
+        <div class="container">
+          <h1>Supported by</h1>
+          <img class="center" src="/2018/her2point0/img/AccentureLogo.png">
+        </div>
+      </section>
+
+<% include 2018-partials/global/footer %>
+<% include 2018-partials/global/scripts %>

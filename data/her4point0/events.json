@@ -1,0 +1,101 @@
+[
+  {
+    "speaker": "Michie Ang",
+    "speakerImageURL": "https://dl.airtable.com/.attachments/e8dc46fd1559bcf6354e7907fced8256/ddb8b9b5/michie-profile-pic-1.png",
+    "profession": "Mad Scientist",
+    "company": "Inbytes.dev",
+    "type": "Activity",
+    "date": "March 16, 2021 | 8:00 - 8:30 PM",
+    "title": "Tangle No More: A open discussion on cord organization",
+    "description": "This will be a discussion about Cord/Wiring Organization. If you are thinking about organizing your cords or wants to share your own cord setup, come join the discussion. Let's untangle those cords one by one!",
+    "meetupURL": "https://www.meetup.com/Women-Who-Code-Manila/events/276755583"
+  },
+  {
+    "speaker": "Mary Jeykle Sunas",
+    "speakerImageURL": "https://dl.airtable.com/.attachments/d8f34f334bdf47e50b0c671f838938db/772045f8/MaryJeykleSunas.jpg",
+    "profession": "Systems Developer",
+    "company": "DSWD",
+    "type": "Activity",
+    "date": "March 15, 2021 | 7:00 pm - 7:40 pm",
+    "title": "Vision Boarding: Your Dream Workspace",
+    "description": "We all have our dream workspace. Having a home workspaces has suddenly become important with most of us are working from home in this time of pandemic.\n\nIn this activity we will be have a vision boarding of our dream work from home setup/workspace. Vision boarding is an excellent way to get clear on your goals and be motivated to bring them to reality. \n\nBefore the event, participants need to prepare these supplies:\n\n- A board for your base. Cork, wire, or a magnetic whiteboard would all work.\n\n- Scissors.\n\n- Depending on your base, pushpins, tape or glue, magnets, or clips to secure images.\n\n- Images or objects that resonate with you and your goal that can be placed on your board. Think magazine clippings, photos, quotes, and more. \n\n- Stickers, markers, or any other extras you want to add, if you so wish.",
+    "meetupURL": "https://www.meetup.com/Women-Who-Code-Manila/events/276844401"
+  },
+  {
+    "speaker": "Freilla Mae Espinola",
+    "speakerImageURL": "https://dl.airtable.com/.attachments/06145ecfd592b34ceb650ac3ec98a901/a09b504c/20190726_142553.jpg",
+    "profession": "Engineering Lead",
+    "company": "Misfit Inc.",
+    "type": "Activity",
+    "date": "March 17, 2021 | 8:00 - 8:30 PM",
+    "title": "Game Night: Mobile Legends",
+    "description": "We will be playing a casual 5v5 game in Mobile legends.",
+    "meetupURL": "https://www.meetup.com/Women-Who-Code-Manila/events/276862479/"
+  },
+  {
+    "speaker": "Ce Manalang",
+    "speakerImageURL": "https://dl.airtable.com/.attachments/92f1f70cf46423418c142d8b5bd65242/ed3ee810/IMG_1029sq.JPG",
+    "profession": "Cartoonist, Comic Strip Artist, Writer and Web Developer",
+    "company": "centimentalcomics.com",
+    "type": "Talk",
+    "date": "March 18, 2021 | 7:00 pm - 7:30 pm",
+    "title": "Sketchnoting",
+    "description": "Introduction to visual tech note-taking or how to prepare for your next pictionary night: tech edition",
+    "meetupURL": "https://www.meetup.com/Women-Who-Code-Manila/events/276708921/"
+  },
+  {
+    "speaker": "Kim Morano",
+    "speakerImageURL": "https://dl.airtable.com/.attachments/152e8fe23d7780fbaa99cb44aeafc121/4f4d79aa/2388C271-5DB3-4FE9-94A0-209EB81FB925.jpeg",
+    "profession": "Head of IT and Design",
+    "company": "MedGrocer",
+    "type": "Talk",
+    "date": "March 19 | 8:00 - 8:30 PM",
+    "title": "Automating Life with AppScript",
+    "description": "Make the most out of the tools we have with a GMail account.",
+    "meetupURL": "https://www.meetup.com/Women-Who-Code-Manila/events/276887476/"
+  },
+  {
+    "speaker": "Karen Matala",
+    "speakerImageURL": "https://dl.airtable.com/.attachments/e0a1a36de9b7a45eb106f1c9c6c8c200/7a633fa7/github_avatar_karen.jfif",
+    "profession": "CTO",
+    "company": "1Export.net",
+    "type": "Talk",
+    "date": "March 20, 2021 | 11:00 am - 11:30 am",
+    "title": "Honest Guide to Remote Work",
+    "description": "Karen will share about the guide to remote work that is not trying to sell you anything. She got fortunate enough to remote work amidst the pandemic and she will share her tips and insights gained working remotely.",
+    "meetupURL": "https://www.meetup.com/Women-Who-Code-Manila/events/276708956/"
+  },
+  {
+    "speaker": "Mars Gabutero",
+    "speakerImageURL": "https://dl.airtable.com/.attachments/d468f5b76324009bdef670bed24a3d34/d890b0ca/dimasuklay.jpg",
+    "profession": "Software Developer",
+    "company": "-",
+    "type": "Activity",
+    "date": "March 25, 2021 | 7:00 pm - 8:00 pm",
+    "title": "Hugot Huwebes Online",
+    "description": "Join us for a casual get-together to talk about different dev-related topics over virtual drinks. This event will follow the lean coffee format, in which participants build an agenda and discuss topics collectively. Bring your best #devhugot lines and meet new friends from the tech community!",
+    "meetupURL": "https://www.meetup.com/Women-Who-Code-Manila/events/276889324/"
+  },
+  {
+    "speaker": "Azel Tan",
+    "speakerImageURL": "https://dl.airtable.com/.attachments/4deae1843e4a4714e2a943711d5c0510/4960c22b/Azel.jpg",
+    "profession": "Director",
+    "company": "WWCode Manila",
+    "type": "Activity",
+    "date": "March 26, 2021 | 8:30 pm - 9:00 pm",
+    "title": "Online Game Night: Among Us",
+    "description": "March is ending soon and this will be the last Friday of the month. Sit down, chill, and catch up with us or meet new friends while playing Among Us. Please install among us before the event to save time. If you haven't played it yet, don't worry we will guide you. The more the merrier, so come and play with us. :)",
+    "meetupURL": "https://www.meetup.com/Women-Who-Code-Manila/events/276862455/"
+  },
+  {
+    "speaker": "Charo Nuguid",
+    "speakerImageURL": "https://dl.airtable.com/.attachments/87cba8f585eeb8269572cd1add0a3916/1561522b/2020.jpg",
+    "profession": "Technology Consultant and Trainer",
+    "company": "Freelance",
+    "type": "Presentation",
+    "date": "March 27, 2021 | 2:00 pm - 3:00 pm",
+    "title": "The Art of Technical Writing",
+    "description": "When one talks about technical writing, it often brings up notions of people writing user manuals and documentation. In reality, it goes beyond that and is a required skill whether you're sending an email to your boss or applying for a job. The Art of Technical Writing will give you the 101 on how to do written formal correspondence for almost any situation.",
+    "meetupURL": "https://www.meetup.com/Women-Who-Code-Manila/events/276844513/"
+  }
+]

@@ -1,0 +1,134 @@
+h1 {
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+h2 {
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+a {
+    color: #007a7c;
+}
+
+.bg-wwcode {
+    background-color: #007a7c !important;
+}
+
+.text-muted {
+    color: #fff !important;
+}
+
+.jumbotron {
+  background: url("/2018/her2point0/img/collage-white.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  max-height: 590px;
+  min-height: 450px;
+}
+
+.jumbotron-heading {
+  color: "3d3d3d";
+}
+
+.btn {
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+
+.btn-primary {
+	background-color: #007a7c;
+	border-color: #007a7c;
+	padding: 20px 25px;
+}
+
+.btn-primary:hover {
+    background-color: #f8f9fa;
+    color: #48484A;
+    border-color: #efefef;
+    padding: 20px 25px;
+}
+
+.about {
+
+}
+
+.agenda {
+}
+
+.title {
+	color: #007a7c;
+}
+
+ul {
+	list-style: none;
+}
+
+.speakers {
+    background-color: #f8f9fa !important;
+}
+
+.speakers-list{
+   width: 1000px;
+   margin: 50px auto;
+}
+
+.speakers-list li{
+  /*box-shadow: 7px 7px 118px 14px rgba(45,45,45,.17);*/
+  margin: 10px 0;
+  border-radius:100px;
+  width: 130px;
+}
+
+.map {
+    height: 400px;
+    background-color: #f8f9fa !important;
+}
+
+.supporters {
+	margin-bottom: 60px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.footer {
+  background-color: #f8f9fa !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer-links > li + li::before {
+  content: "|";
+}
+
+/* apply this on small screens like smartphones, etc */
+@media screen and (max-width: 767.98px) {
+  .jumbotron-heading {
+    font-size: 1.75rem;
+  }
+}
+
+/* apply this on extra small screens like smartphones on portrait, etc */
+@media screen and (max-width: 575.98px) {
+  .jumbotron-heading {
+    font-size: 1.25rem;
+  }
+
+  .center {
+    width: 90%;
+  }
+
+  .footer-links > li + li::before {
+    content: "";
+  }
+
+}
