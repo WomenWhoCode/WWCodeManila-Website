@@ -22,11 +22,11 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/wwcodemanila/hackathon-website#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.20.1",
     "cookie-session": "^2.0.0-beta.3",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "express-ejs-layouts": "^2.3.1"
   },
   "engines": {
